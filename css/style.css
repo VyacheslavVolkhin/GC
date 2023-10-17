@@ -1518,6 +1518,15 @@ body {
 .card-box .ext-inner-wrap {
   padding-top: 50px;
 }
+.card-box .ext-inner-wrap .frm-select-price {
+  display: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.15384615;
+  letter-spacing: -0.26px;
+}
 .card-box .ext-inner-wrap .items-wrap {
   margin: 0 -13px;
 }
@@ -2551,6 +2560,12 @@ body.popup-open {
     position: sticky;
     top: 0;
   }
+  .card-box .ext-outer-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
   .card-box .action-inner-wrap {
     padding: 0;
     position: absolute;
@@ -2587,16 +2602,47 @@ body.popup-open {
     width: 52%;
     padding: 7.5rem 5rem 4rem 0;
   }
+  .card-box .ext-inner-wrap {
+    margin-right: 0;
+    margin-left: -2rem;
+  }
   .card-box .ext-inner-wrap .item-wrap {
     margin-bottom: 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .card-box .ext-inner-wrap .items-wrap {
+    margin: 0;
+  }
+  .card-box .ext-inner-wrap .frm-select-toggle {
+    width: auto;
+    -ms-flex: 1;
+        flex: 1;
+    max-width: 56rem;
+  }
+  .card-box .ext-inner-wrap .frm-select-price {
+    color: #545454;
+    white-space: nowrap;
+    display: block;
+    padding-left: 24px;
   }
   .card-box .ext-info-wrap {
     font-size: 2.4rem;
     letter-spacing: -0.36px;
+    padding-right: 0;
   }
   .card-box .ext-info-wrap .feature-row {
     font-size: 1em;
     margin: 2rem 0 0 0;
+    display: none;
+  }
+  .card-box .ext-info-wrap .feature-row.row-d {
+    display: -ms-flexbox;
+    display: flex;
   }
   .card-box .ext-info-wrap .feature-row:first-child {
     margin-top: 0;

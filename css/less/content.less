@@ -235,6 +235,13 @@
     }
     .ext-inner-wrap {
         padding-top: 50px;
+        .frm-select-price {
+            display: none;
+            flex-shrink: 0;
+            font-size: 2.6rem;
+            line-height: (30/26);
+            letter-spacing: -0.26px;
+        }
         .items-wrap {
             margin: 0 -13px;
         }
@@ -1200,6 +1207,10 @@ body.popup-open {
             position: sticky;
             top: 0;
         }
+        .ext-outer-wrap {
+            display: flex;
+            flex-direction: column-reverse;
+        }
         .action-inner-wrap {
             padding: 0;
             position: absolute;
@@ -1236,16 +1247,40 @@ body.popup-open {
             }
         }
         .ext-inner-wrap {
+            margin-right: 0;
+            margin-left: -2rem;
             .item-wrap {
                 margin-bottom: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .items-wrap {
+                margin: 0;
+            }
+            .frm-select-toggle {
+                width: auto;
+                flex: 1;
+                max-width: 56rem;
+            }
+            .frm-select-price {
+                color: #545454;
+                white-space: nowrap;
+                display: block;
+                padding-left: 24px;
             }
         }
         .ext-info-wrap {
             font-size: 2.4rem;
             letter-spacing: -0.36px;
+            padding-right: 0;
             .feature-row {
                 font-size: 1em;
                 margin: 2rem 0 0 0;
+                display: none;
+                &.row-d {
+                    display: flex;
+                }
                 &:first-child {
                     margin-top: 0;
                 }
