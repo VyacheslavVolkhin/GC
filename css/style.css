@@ -2379,6 +2379,10 @@ body.popup-open {
       -ms-flex-order: 6;
           order: 6;
     }
+    .card-box .ext-outer-wrap {
+      -ms-flex-order: 4;
+          order: 4;
+    }
   }
   .card-box .stickers-inner-wrap .elm-sticker {
     display: block;
@@ -2657,7 +2661,7 @@ body.popup-open {
     margin-bottom: 9rem;
   }
   .card-box .photos-info-inner-wrap {
-    padding: 15rem 0 0 32px;
+    padding: 1rem 0 0 32px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
