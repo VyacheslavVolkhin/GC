@@ -224,7 +224,7 @@ $(document).ready(function () {
 	//popups
 	let popupCurrent;
 	$('.js-popup-open').on('click', function () {
-		if ($(this).closest('.frm-select-toggle')) {
+		if ($(this).parents('.frm-select-toggle').length>0) {
 			if ($(this).is(':checked')) {
 				$('.popup-outer-box').removeClass('active');
 				$('body').addClass('popup-open');

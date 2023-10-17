@@ -3841,6 +3841,9 @@ select.form-input:required:invalid {
     width: 5rem;
     height: 5rem;
   }
+  .frm-select-check label:before {
+    border-width: 2px;
+  }
   .frm-select-toggle {
     font-size: 2.3rem;
     letter-spacing: -0.23px;
@@ -3872,6 +3875,7 @@ select.form-input:required:invalid {
     margin-top: -2rem;
     left: 6.5rem;
     margin-left: -4.5rem;
+    border-width: 2px;
   }
   .frm-select-toggle label .lbl-inner-wrap:after {
     width: 4rem;
@@ -3880,6 +3884,7 @@ select.form-input:required:invalid {
     left: 6.5rem;
     margin-left: -4.5rem;
     border-radius: 2rem;
+    border-width: 2px;
   }
   .frm-select-toggle label:before {
     border-radius: 3.5rem;
