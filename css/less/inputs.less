@@ -1,0 +1,415 @@
+/* ----------------------------------- *\
+			inputs elements styles
+\* ----------------------------------- */
+.form-input[placeholder] {
+    text-overflow: ellipsis;
+}
+.form-input {
+    text-overflow: ellipsis;
+}
+textarea.form-input {
+
+}
+select.form-input {
+    display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 30px;
+    background-image: url(../img/icons/arrow-select.svg);
+    background-position: right 20px center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none!important;
+    line-height: 1em;
+    text-indent: 0.01px;
+    //text-overflow: '';
+    outline: none;
+    &.form-input-clear {
+        height: auto;
+        border: none;
+        min-height: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: inherit;
+        padding: 0 16px 0 0;
+        color: inherit;
+        font-weight: bold;
+        background-image: url(../img/icons/arrow-select.png);
+        background-size: 8px auto;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+//   <select class="form-input form-input-line" required>
+//       <option value="" disabled selected hidden>Выбрать</option>
+//       <option>Пункт списка</option>
+//   </select>
+select.form-input:required:invalid {
+    color: #ADADAD;
+}
+.btn {
+    height: 60px;
+    border: 1px solid var(--clr-att);
+    background: var(--color-att-yellow);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--clr-att);
+    letter-spacing: -0.16px;
+    font-weight: 400;
+    padding: 0 4rem;
+    border-radius: 30px;
+    &.button-border {
+        &:not(:hover) {
+            background-color: transparent;
+            color: #231f20;
+        }
+        &:hover, &.active {
+            background-color: var(--clr-att);
+            border-color: var(--clr-att);
+            .button-ico {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    .button-ico {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+        transition: all ease 0.2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .button-title {
+        &[data-title] {
+            &:before {
+                content: attr(data-title);
+            }
+        }
+    }
+    &.active {
+        .button-title {
+            &[data-title-active] {
+                &:before {
+                    content: attr(data-title-active);
+                }
+            }
+        }
+    }
+}
+.btn-action-ico {
+    min-width: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    flex-shrink: 0;
+    &:not(.btn) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn {
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        display: block;
+    }
+    &:before, &:after, [class*="icon-"], img, svg {
+        display: block;
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        transition: all ease 0.2s;
+    }
+    img, svg {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    &:before, &:after {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px auto;
+    }
+    &:hover {
+        text-decoration: none;
+        &:not(.btn) {
+            background: none;
+            box-shadow: none;
+        }
+    }
+    &.ico-arrow {
+        z-index: 20;
+        cursor: pointer;
+        &:before {
+            background-image: url(../img/icons/arrow-slider.svg);
+            background-size: 30px auto;
+        }
+        &:hover {
+        }
+    }
+    &.ico-arrow-prev {
+        &:before {
+            .t-rotate(180deg);
+        }
+    }
+    &.ico-cart {
+        &.btn {
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0px 15px 15px 0px rgba(235, 197, 0, 0.10);
+            &:hover {
+                box-shadow: 0px 15px 15px 0px rgba(235, 197, 0, 0.10);
+            }
+        }
+        &:before {
+            background-image: url(../img/icons/cart-button.svg);
+            background-size: 100% auto;
+        }
+    }
+    &.ico-menu {
+        &:after, &:before {
+            width: 24px;
+            height: 18px;
+            border-top: 2px solid var(--clr-base);
+            border-bottom: 2px solid var(--clr-base);
+            margin: -9px 0 0 -12px;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+        }
+        &:before {
+            height: 2px;
+            margin-top: -1px;
+            border-top: none;
+        }
+        &.active {
+            &:after {
+                height: 2px;
+                margin-top: -1px;
+                border-top: none;
+                .t-rotate(-45deg);
+            }
+            &:before {
+                .t-rotate(45deg);
+            }
+        }
+    }
+    &.ico-close {
+        &:after, &:before {
+            width: 20px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            bottom: auto;
+            right: auto;
+            margin: -1px 0 0 -10px;
+            background: var(--clr-base);
+        }
+        &:before {
+            .t-rotate(45deg);
+        }
+        &:after {
+            .t-rotate(-45deg);
+        }
+    }
+    &.button-soc {
+        img, svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.show-all {
+    .btn-action-more {
+        .button-title {
+            &:after, &:before {
+                .t-rotate(180deg);
+            }
+        }
+        .button-title-text {
+            &:before {
+                content: attr(data-hide);
+            }
+        }
+    }
+}
+.btn-action-more {
+    display: block;
+    text-align: center;
+    position: relative;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 11.092px;
+    .ft;
+    &:before, &:after {
+        content: "";
+        display: block;
+        border-top: 1px solid var(--clr-border);
+        border-bottom: 1px solid var(--clr-border);
+        position: absolute;
+        top: 4px;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+    }
+    &:after {
+        top: 50%;
+        margin-top: -1px;
+    }
+    .button-title-text {
+        display: inline;
+        &:before {
+            content: attr(data-show);
+        }
+    }
+    .button-title {
+        display: inline-block;
+        max-width: 100%;
+        position: relative;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 30px;
+        min-width: 136px;
+        background-color: #fff;
+        border: 1px solid var(--clr-border);
+        border-radius: 10px;
+        z-index: 2;
+        &:before, &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: -2px;
+            margin-top: -10px;
+            background: url(../img/icons/arrow-more.svg) center no-repeat;
+            background-size: 6px auto;
+            transition: all ease 0.2s;
+        }
+        &:after {
+            left: auto;
+            right: -2px;
+        }
+    }
+}
+.btn-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px 30px 50px;
+    color: var(--clr-att);
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    .button-title {
+        display: block;
+        flex-shrink: 0;
+        max-width: 100%;
+        border-radius: 50px;
+        padding: 0 10px;
+        background: var(--clr-bg-light);
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background: url(../img/icons/arrow-button.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 30px;
+        left: 30px;
+        margin: -12px 0 0 -12px;
+        .t-rotate(180deg);
+    }
+}
+@media (min-width: 1024px) {
+    .btn {
+        height: 9rem;
+        border-radius: 5rem;
+        font-size: 2.3rem;
+        letter-spacing: -0.23px;
+    }
+    .btn-action-ico {
+        &.ico-arrow {
+            width: 7rem;
+            height: 7rem;
+            &:before {
+                background-size: 100% auto;
+            }
+        }
+    }
+    .btn-action-more {
+        font-size: 16px;
+        &:before {
+            height: 18px;
+            border-width: 2px;
+            margin-top: -9px;
+            top: 50%;
+            bottom: auto;
+        }
+        &:after {
+            border: none;
+            background: var(--clr-border);
+            height: 2px;
+            margin-top: -1px;
+        }
+        .button-title {
+            height: 34px;
+            border-radius: 17px;
+            padding: 0 30px;
+            line-height: 32px;
+            min-width: 25.5rem;
+            border-width: 2px;
+            &:before, &:after {
+                width: 9px;
+                height: 9px;
+                margin-top: -5px;
+                background-size: 100% auto;
+                left: 15px;
+            }
+            &:after {
+                left: auto;
+                right: 15px;
+            }
+        }
+        
+    }
+}

@@ -1,44 +1,100 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
-.item-photo {
+:is([class^="item-tile"]) {
+    &:hover {
+        .elm-photo, .tile-photo {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+.elm-photo, .tile-photo {
     display: block;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     line-height: 1;
+    //transform: translateZ(0);
+    &.photo-main {
+        border: 1px solid #f00;
+        width: 300px;
+        height: 300px;
+    }
     &:before {
         content: "";
-        display: block;
+        display: none;
         padding-top: 100%;
     }
     img {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
+        transition: all ease-out 1s;
     }
-    &.photo-full {
+    &.photo-cover {
         &:before {
-            display: none;
+            display: block;
         }
         img {
-            position: relative;
-            top: auto;
-            bottom: auto;
-            left: auto;
-            right: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &.photo-contain {
+        &:before {
+            display: block;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
     }
 }
-.elm-ico, .button-ico, .menu-ico, .frm-ico {
+@supports (aspect-ratio: 1) {
+    .elm-photo, .tile-photo {
+        &:not(.photo-cover, .photo-contain) {
+            aspect-ratio: inherit !important;
+        }
+    }
+    .photo-cover, .photo-contain {
+        aspect-ratio: 1;
+        &:before {
+            display: none !important;
+        }
+    }
+}
+.elm-price, .tile-price, .lbl-price {
+    white-space: nowrap;
+    &.price-old {
+        text-decoration: line-through;
+    }
+    &[data-unit] {
+        &:after {
+            content: ' ' attr(data-unit);
+        }
+    }
+}
+.elm-ico, .button-ico, .menu-ico, .frm-ico, .tab-ico, .tile-ico, .lbl-ico {
     display: block;
     position: relative;
     overflow: hidden;
     width: 40px;
     height: 40px;
-    img, .i, svg {
+    img, [class*="icon-"], .i, svg {
         display: block;
         position: absolute;
         top: 0;
@@ -48,5 +104,139 @@
         margin: auto;
         max-width: 100%;
         max-height: 100%;
+    }
+}
+.elm-overlay {
+    display: none;
+    animation: fadein ease 0.2s;
+    background: fade(#000, 80);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 120;
+    &.active {
+        display: block;
+    }
+}
+.elm-sticker, .tile-sticker {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 10px;
+    line-height: 1;
+    color: var(--clr-att);
+    padding: 4px 10px;
+    background: var(--color-att-pink-medium);
+    border-radius: 30px;
+    &.color-second {
+        background-color: var(--clr-att-light);
+        color: var(--clr-base);
+    }
+    &.color-third {
+        color: var(--clr-att);
+        background-color: #E8F5E9;
+    }
+    .elm-ico, .tile-ico {
+        width: 20px;
+        height: 20px;
+        margin: -3px 3px -4px 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &[data-count]:after {
+        content: attr(data-count);
+        height: 22px;
+        line-height: 22px;
+        padding: 0 6px;
+        border-radius: 11px;
+        background-color: var(--color-att-pink-medium);
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -1.018px;
+        color: var(--clr-att);
+        font-style: normal;
+        z-index: 2;
+        position: absolute;
+        bottom: 50%;
+        left: 100%;
+        margin-left: -10px;
+        margin-bottom: -4px;
+    }
+}
+.elm-counter, .tile-counter {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    height: (20/12em);
+    line-height: (20/12em);
+    padding: 0 0.5em;
+    font-style: italic;
+    color: var(--clr-att);
+    border-radius: 50px;
+    background: var(--color-att-pink-medium);
+}
+.elm-size {
+    display: block;
+    position: relative;
+    width: 6.4rem;
+    height: 6.4rem;
+    background: url(../img/icons/size.svg) center no-repeat;
+    background-size: 100% auto;
+    z-index: 4;
+    .size-title {
+        display: block;
+        float: left;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 20px;
+        transform-origin: 0 0;
+        position: absolute;
+        top: 0;
+        left: -2px;
+        .t-rotate(-90deg);
+        padding-left: 10px;
+        color: var(--clr-att);
+        &+.size-title {
+            left: 53%;
+            top: 1.5rem;
+            .t-rotate(-45deg);
+            &+.size-title {
+                left: 100%;
+                top: auto;
+                bottom: -2px;
+                transform: none;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .elm-counter, .tile-counter {
+        font-size: 2rem;
+        height: 3.4rem;
+        padding: 0 1rem;
+        border-radius: 5rem;
+    }
+    .elm-sticker, .tile-sticker {
+        height: 4rem;
+        border-radius: 2rem;
+        padding: 0 1.8rem;
+        line-height: 4rem;
+        font-size: 2.3rem;
+        letter-spacing: -0.23px;
+        white-space: nowrap;
+        &.st-ico {
+            display: flex;
+            .elm-ico {
+                width: 3.8rem;
+                height: 3.8rem;
+                margin: 3px 5px 0 -1rem;
+                flex-shrink: 0;
+                img, svg {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
