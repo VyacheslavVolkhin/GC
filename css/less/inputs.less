@@ -11,12 +11,14 @@ textarea.form-input {
 
 }
 select.form-input {
+    cursor: pointer;
     display: block;
     text-overflow: ellipsis;
     width: 100%;
     padding-right: 30px;
     background-image: url(../img/icons/arrow-select.svg);
-    background-position: right 20px center;
+    background-size: 16px auto;
+    background-position: right center;
     background-color: #fff;
     background-repeat: no-repeat;
     -moz-appearance: none;
@@ -55,7 +57,7 @@ select::-ms-expand {
 //       <option>Пункт списка</option>
 //   </select>
 select.form-input:required:invalid {
-    color: #ADADAD;
+    color: var(--clr-att);
 }
 .btn {
     height: 60px;

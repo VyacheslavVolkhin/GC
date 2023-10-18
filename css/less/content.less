@@ -2,6 +2,54 @@
 			content styles
 \* ----------------------------------- */
 .popup-select-box {
+    .select-input-wrap {
+        margin-bottom: 4rem;
+        .frm-field-input {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .select-text-wrap {
+        margin-bottom: 4rem;
+        textarea.form-input {
+            height: 135px;
+            border: 1px solid var(--clr-att);
+            padding: 15px;
+            font-size: 16px;
+            line-height: 1.2;
+            border-radius: 20px;
+        }
+    }
+    .select-items-wrap {
+        font-size: 16px;
+        margin-bottom: 4rem;
+        .item-wrap {
+            margin-bottom: 4rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .wrap-title {
+            font-size: 1.4em;
+            text-transform: none;
+            font-weight: 500;
+            margin: 0 0 0.5em 0;
+        }
+        .elm-ico {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+            &.ico-small {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        p {
+            margin-bottom: 5px;
+        }
+    }
     .select-photos-wrap {
         padding: 0 10px;
         margin-bottom: 55px;
@@ -641,7 +689,6 @@ body.popup-open {
     display: flex;
     visibility: hidden;
     padding: 0;
-    animation: fadein ease 0.2s;
     flex-direction: column;
     position: fixed;
     z-index: 100;
@@ -664,6 +711,7 @@ body.popup-open {
     }
     &.active {
         display: flex;
+        animation: fadein ease 0.7s;
         visibility: visible;
         opacity: 1;
     }
