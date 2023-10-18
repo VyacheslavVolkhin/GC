@@ -417,7 +417,7 @@
                                         <div class="row-value">цена штуки</div>
                                     </div>
                                     <div class="items-wrap">
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select wrap-select-first">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price01">
                                                 <label for="price01">
@@ -426,7 +426,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price02" checked>
                                                 <label for="price02">
@@ -435,7 +435,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price03">
                                                 <label for="price03">
@@ -444,45 +444,50 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price04">
                                                 <label for="price04">
-                                                    <span class="lbl-title">1—9 шт.</span>
+                                                    <span class="lbl-title">100—499 шт.</span>
                                                     <span class="lbl-price" data-unit="₽">232.5</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price05">
                                                 <label for="price05">
-                                                    <span class="lbl-title">10—49 шт.</span>
+                                                    <span class="lbl-title">500—999 шт.</span>
                                                     <span class="lbl-price" data-unit="₽">95.5</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price06">
                                                 <label for="price06">
-                                                    <span class="lbl-title">50—99 шт.</span>
+                                                    <span class="lbl-title">1000—4999 шт.</span>
                                                     <span class="lbl-price" data-unit="₽">87.5</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap">
+                                        <div class="item-wrap wrap-select wrap-select-last">
                                             <div class="frm-select-price">
                                                 <input type="radio" name="price" id="price07">
                                                 <label for="price07">
-                                                    <span class="lbl-title">50—99 шт.</span>
+                                                    <span class="lbl-title">5000+ шт.</span>
                                                     <span class="lbl-price" data-unit="₽">87.5</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="item-wrap wrap-more">
+                                        <div class="item-wrap wrap-more-bottom">
                                             <a href="" class="btn-action-more">
-                                                <span class="button-title"><span class="button-title-text" data-show="ещё 4 цены" data-hide="Скрыть"></span></span>
+                                                <span class="button-title"><span class="button-title-text" data-show="ещё 4 цены bottom" data-hide="Скрыть"></span></span>
+                                            </a>
+                                        </div>
+                                        <div class="item-wrap wrap-more-top">
+                                            <a href="" class="btn-action-more">
+                                                <span class="button-title"><span class="button-title-text" data-show="ещё 4 цены top" data-hide="Скрыть"></span></span>
                                             </a>
                                         </div>
                                     </div>
@@ -578,7 +583,9 @@
                 <div class="popup-box">
                     <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
                     <div class="popup-action-wrap">
-                        <a href="" class="btn-popup-back">назад к товару</a>
+                        <a href="" class="btn-popup-back">
+                            <span class="button-title">назад к товару</span>
+                        </a>
                     </div>
                     <div class="popup-content-wrap">
                         <div class="photos-slider-box">
@@ -866,7 +873,9 @@
                                 <div class="select-counter-wrap type-second">
                                     <div class="counter-wrap">
                                         <div class="frm-field-input">
-                                            <input type="text" class="form-input" placeholder="Ширина">
+                                            <div class="field-input-content">
+                                                <input type="text" class="form-input" placeholder="Ширина">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="check-wrap">

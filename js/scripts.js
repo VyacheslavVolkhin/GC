@@ -1,13 +1,4 @@
-//wrap more
-const buttonMore = document.querySelectorAll('.items-wrap .btn-action-more');
-buttonMore.forEach(function (item) {
-	item.addEventListener('click', function(e) {
-		this.closest('.items-wrap').classList.toggle('show-all')
-		e.preventDefault()
-		e.stopPropagation()
-		return false;
-	})
-})
+
 
 
 //field counter
@@ -194,6 +185,7 @@ for (i = 0;i < menuButton.length;i++) {
 
 $(document).ready(function () {
 
+	//header
 	if (!!$('.header').offset()) {
 		$(window).scroll(function () {
 			let windowTop = $(window).scrollTop();
@@ -304,4 +296,78 @@ $(document).ready(function () {
 		})
 		$('.photos-slider-box .elm-photo[data-slide="0"]').parent('.sl-wrap').addClass('active');
 	}
+	
+	//card select
+	function cardSelected() {
+		$('.card-box .rows-right-wrap .wrap-select').each(function() {
+			if ($(this).hasClass('active-prev')) {
+				$(this).slideUp(1000)
+			}
+			$(this).removeClass('active')
+			$(this).removeClass('active-prev')
+			$(this).removeClass('active-next')
+			if ($(this).find('input').is(':checked')) {
+				$(this).addClass('active')
+				if ($(this).prev('.wrap-select').length>0) {
+					$(this).prev('.wrap-select').addClass('active-prev')
+				}
+				if ($(this).next('.wrap-select').length>0) {
+					$(this).next('.wrap-select').addClass('active-next')
+				}
+				return false;
+			}
+		})
+		$('.card-box .rows-right-wrap .wrap-select.active, .card-box .rows-right-wrap .wrap-select.active-prev, .card-box .rows-right-wrap .wrap-select.active-next').show(0);
+	}
+	$('.card-box .rows-right-wrap').on('click', '.wrap-select',function() {
+		if ($(this).hasClass('active-prev')) {
+			if (!$(this).parent('.items-wrap').hasClass('show-all')) {
+				$(this).parent('.items-wrap').find('.active-next').removeClass('active-next').slideUp(200);
+			} else {
+				$(this).parent('.items-wrap').find('.active-next').removeClass('active-next')
+			}
+			$(this).parent('.items-wrap').find('.active').removeClass('active')
+			$(this).parent('.items-wrap').find('.active-prev').removeClass('active-prev')
+			if (!$(this).parent('.items-wrap').hasClass('show-all')) {
+				$(this).addClass('active').prev('.wrap-select').addClass('active-prev').slideDown(200);
+				$(this).next('.wrap-select').addClass('active-next')
+			} else {
+				$(this).addClass('active').prev('.wrap-select').addClass('active-prev')
+				$(this).next('.wrap-select').addClass('active-next')
+			}
+		}
+		else if ($(this).hasClass('active-next')) {
+			if (!$(this).parent('.items-wrap').hasClass('show-all')) {
+				$(this).parent('.items-wrap').find('.active-prev').removeClass('active-prev').slideUp(200);
+			} else {
+				$(this).parent('.items-wrap').find('.active-prev').removeClass('active-prev')
+			}
+			$(this).parent('.items-wrap').find('.active').removeClass('active')
+			$(this).parent('.items-wrap').find('.active-next').removeClass('active-next')
+			$(this).addClass('active').prev('.wrap-select').addClass('active-prev')
+			if (!$(this).parent('.items-wrap').hasClass('show-all')) {
+				$(this).next('.wrap-select').addClass('active-next').slideDown(200)
+			} else {
+				$(this).next('.wrap-select').addClass('active-next')
+			}
+		}
+		else {
+			$(this).parent('.items-wrap').find('.active-prev').removeClass('active-prev')
+			$(this).parent('.items-wrap').find('.active-next').removeClass('active-next')
+			$(this).parent('.items-wrap').find('.active').removeClass('active')
+			$(this).addClass('active')
+			$(this).prev('.wrap-select').addClass('active-prev')
+			$(this).next('.wrap-select').addClass('active-next')
+		}
+	})
+	$('.card-box .rows-right-wrap .wrap-more-top .btn-action-more, .card-box .rows-right-wrap .wrap-more-bottom .btn-action-more').on('click', function() {
+		$(this).parents('.items-wrap').toggleClass('show-all')
+		$(this).parents('.items-wrap').find('.wrap-select').hide(0)
+		$(this).parents('.items-wrap').find('.active').show(0)
+		$(this).parents('.items-wrap').find('.active-next').show(0)
+		$(this).parents('.items-wrap').find('.active-prev').show(0)
+		
+		return false
+	})
+	cardSelected()
 });

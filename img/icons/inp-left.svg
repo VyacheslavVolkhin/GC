@@ -17,8 +17,7 @@
 <path d="M16.8057 16.8979L12.5889 13.1855L21.7254 8.85452L16.8057 16.8979Z" fill="#B1A19D"/>
 <path d="M15.599 14.0011L4.15984 27.0019" stroke="#B1A19D" stroke-width="1.72025" stroke-dasharray="0.17 3.44"/>
 </g>
-<path d="M15.5996 32L15.5996 22L32.2388 27L15.5996 32Z" fill="#8A675F"/>
-<path d="M28.0786 27L0 27" stroke="#8A675F" stroke-width="1.8"/>
+
 <defs>
 <filter id="filter0_f_98_58" x="-71" y="-1242" width="1761" height="1800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
