@@ -1,6 +1,8 @@
 /* ----------------------------------- *\
 			structura
 \* ----------------------------------- */
+.wrap {
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -643,6 +645,11 @@ html {
                     }
                 }
             }
+            a {
+                &:hover {
+                    color: var(--clr-base);
+                }
+            }
         }
         .submenu-inner-wrap {
             display: none;
@@ -723,6 +730,9 @@ html {
                 width: 7.8rem;
                 margin-left: 1.2rem;
                 flex-shrink: 0;
+            }
+            &:hover {
+                
             }
         }
     }

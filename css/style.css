@@ -173,14 +173,24 @@ h1 {
 .title-center {
   text-align: center;
 }
+@media (max-width: 1799px) {
+  :root {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1599px) {
+  :root {
+    font-size: 8px;
+  }
+}
 @media (max-width: 1399px) {
   :root {
-    font-size: 9.5px;
+    font-size: 8px;
   }
 }
 @media (max-width: 1199px) {
   :root {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 @media (max-width: 1023px) {
@@ -869,6 +879,9 @@ body {
   }
   .popup-menu-wrap .menu > li.submenu:hover .submenu-inner-wrap {
     display: block;
+  }
+  .popup-menu-wrap .menu a:hover {
+    color: var(--clr-base);
   }
   .popup-menu-wrap .submenu-inner-wrap {
     display: none;
@@ -1589,6 +1602,7 @@ body {
 .card-box .features-inner-wrap .wrap-more-top {
   display: block;
   padding-top: 15px;
+  padding-bottom: 10px;
   -ms-flex-order: 1;
       order: 1;
 }
@@ -3944,6 +3958,10 @@ select.form-input:required:invalid {
   margin-left: -23px;
   box-shadow: 0px 8px 10px 0px rgba(204, 136, 88, 0.05);
 }
+.frm-select-toggle .lbl-title {
+  display: block;
+  position: static;
+}
 .frm-select-price {
   font-size: 14px;
   font-weight: 400;
@@ -4175,6 +4193,16 @@ select.form-input:required:invalid {
 /* ----------------------------------- *\
 		common styles
 \* ----------------------------------- */
+@keyframes popup {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(100);
+  }
+}
 @keyframes flash {
   0% {
     opacity: 0.55;
