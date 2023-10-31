@@ -1,4 +1,44 @@
+//js tabs
+const tabsNav = document.querySelectorAll('.js-tabs-nav')
+const tabsBlocks = document.querySelectorAll('.js-tab-block')
 
+function tabsActiveStart() {
+	for (iTab = 0; iTab < tabsBlocks.length; iTab++) {
+		if (tabsBlocks[iTab].classList.contains('tabs-active')) {
+			tabsBlocks[iTab].classList.remove('tabs-active')
+		}
+	}
+	for (i = 0; i < tabsNav.length; i++) {
+		let tabsNavElements = tabsNav[i].querySelectorAll('[data-tab]')
+		for (iElements = 0; iElements < tabsNavElements.length; iElements++) {
+			if (tabsNavElements[iElements].classList.contains('tabs-active')) {
+				let tabsNavElementActive = tabsNavElements[iElements].dataset.tab
+				for (j = 0; j < tabsBlocks.length; j++) {
+					if (tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive) > -1) {
+						console.log(tabsBlocks[j].dataset.tab.toString().indexOf(tabsNavElementActive))
+						tabsBlocks[j].classList.add('tabs-active')
+					}
+				}
+			}
+		}
+	}
+
+}
+
+for (i = 0; i < tabsNav.length; i++) {
+	tabsNav[i].addEventListener('click', function (e) {
+		if (e.target.closest('[data-tab]')) {
+			let tabsNavElements = this.querySelector('[data-tab].tabs-active')
+			tabsNavElements ? tabsNavElements.classList.remove('tabs-active') : false
+			e.target.closest('[data-tab]').classList.add('tabs-active')
+			tabsActiveStart()
+			e.preventDefault()
+			e.stopPropagation()
+			return false
+		}
+	})
+}
+tabsActiveStart()
 
 
 //field counter
@@ -185,6 +225,15 @@ for (i = 0;i < menuButton.length;i++) {
 
 $(document).ready(function () {
 
+	//animate anchor scroll
+	$('.js-anchor-button').on("click", function (e) {
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 1000);
+		$(anchor.attr('href')).find('.js-btn-popup-toggle').addClass('active')
+	});
+
 	//header
 	if (!!$('.header').offset()) {
 		$(window).scroll(function () {
@@ -295,6 +344,33 @@ $(document).ready(function () {
 			return false;
 		})
 		$('.photos-slider-box .elm-photo[data-slide="0"]').parent('.sl-wrap').addClass('active');
+	}
+
+	//tiles-main-slider-box
+	if (!!$('.tiles-main-slider-box').offset()) {
+		$('.tiles-main-slider-box .slider').slick({
+			dots: true,
+			slidesToShow: 1,
+			variableWidth: false,
+			infinite: true,
+			adaptiveHeight: false,
+			rows: 1,
+			swipeToSlide: true,
+			autoplay: false,
+			autoplaySpeed: 5000,
+			prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+			nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+			responsive: [
+				{
+					breakpoint: 1600,
+					settings: {
+						prevArrow: false,
+						nextArrow: false,
+					}
+				},
+			]
+		});
+
 	}
 	
 	//card select

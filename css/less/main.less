@@ -52,6 +52,7 @@
 body {
 	color: var(--clr-base);
 	background: #FAFAFC;
+    font-weight: 400;
     font-size: 14px;
     line-height: (18/14);
 }
@@ -91,6 +92,36 @@ a.link-main, .link-main {
     text-decoration: none;
     border-bottom: 1px solid;
     &:hover {
+    }
+}
+.link-arrow {
+    display: inline-block;
+    text-align: left;
+    font-weight: 500;
+    flex-shrink: 0;
+    position: relative;
+    color: var(--clr-att);
+    font-size: 9px;
+    line-height: 20px;
+    border-bottom: 1px solid var(--clr-att);
+    padding: 0 20px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 3.96px;
+    &:hover {
+        color: var(--clr-att);
+        opacity: 0.5;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background: url(../img/icons/arrow-button-main.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 100%;
+        right: -3px;
+        margin-top: -12px;
     }
 }
 .link-phone {
@@ -176,8 +207,21 @@ h6, .h6-title {
     :root {
         --paddingContainer: 30px;
     }
+    .link-arrow {
+        font-size: 13px;
+        line-height: 40px;
+        letter-spacing: 6.01px;
+        font-weight: 500;
+        padding-right: 40px;
+        border-bottom-width: 2px;
+        &:before {
+            width: 42px;
+            height: 31px;
+            margin-top: -14px;
+        }
+    }
     .h1-title, h1 {
-        font-size: 5.4rem;
+        font-size: 4rem;
         line-height: (60/54);
         letter-spacing: -0.756px;
     }
@@ -185,5 +229,8 @@ h6, .h6-title {
 @media (min-width: 1400px) {
     :root {
         --paddingContainer: 40px;
+    }
+    .h1-title, h1 {
+        font-size: 5.4rem;
     }
 }

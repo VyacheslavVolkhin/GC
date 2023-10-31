@@ -6,6 +6,19 @@
     position: relative;
     line-height: 1;
     border-bottom: 2px solid var(--clr-att);
+    &.field-45 {
+        &:before {
+            .t-rotate(135deg);
+            bottom: 6px;
+        }
+    }
+    &.field-90 {
+        &:before {
+            .t-rotate(90deg);
+            bottom: 6px;
+            left: -12px;
+        }
+    }
     &.inp-clear {
         &:before, &:after {
             display: none;
