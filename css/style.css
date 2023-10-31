@@ -4856,7 +4856,7 @@ body.popup-open {
         justify-content: flex-end;
     padding-left: var(--paddingContainer);
     padding-right: var(--paddingContainer);
-    padding-bottom: 10px;
+    padding-bottom: 10rem;
   }
   .popup-box {
     max-width: 1462px;
