@@ -1,54 +1,10 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="20" height="20" fill="#ECECEC"/>
-<g id="&#208;&#147;&#208;&#187;&#208;&#176;&#208;&#178;&#208;&#189;&#208;&#176;&#209;&#143; &#209;&#129;&#209;&#130;&#209;&#128;&#208;&#176;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;">
-<rect width="10000" height="15000" transform="translate(-3139 -2092)" fill="#F2F2F2"/>
-<g id="Group 7624">
-<g id="&#208;&#154;_&#208;&#162;&#208;&#181;&#208;&#187;&#208;&#190;_350">
-<rect x="-41" y="-472" width="360" height="7537" rx="30" fill="#F9F9FC"/>
+<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<path d="M5.5134 5.66016L1.46777 5.66016L3.49059 0.261802L5.5134 5.66016Z" fill="#B1A19D"/>
+<path d="M3.49024 4.76081L3.49023 17.6133" stroke="#B1A19D" stroke-width="0.926952" stroke-linejoin="round" stroke-dasharray="0.09 1.85"/>
+<path d="M11.4944 11.1221L8.8125 8.73633L14.6233 5.95294L11.4944 11.1221Z" fill="#B1A19D"/>
+<path d="M10.7272 9.26009L3.45196 17.6152" stroke="#B1A19D" stroke-width="0.926952" stroke-dasharray="0.09 1.85"/>
 </g>
-<g id="&#208;&#147;&#208;&#187;&#208;&#176;&#208;&#178;&#208;&#189;&#208;&#176;&#209;&#143; &#208;&#188;&#208;&#190;&#208;&#177;">
-<g id="&#208;&#159;&#208;&#181;&#209;&#128;&#208;&#178;&#209;&#139;&#208;&#181; &#208;&#177;&#208;&#187;&#208;&#190;&#208;&#186;&#208;&#184;">
-<g id="&#208;&#156;&#208;&#190;&#208;&#177;_&#208;&#191;&#208;&#190;&#208;&#180;&#208;&#177;&#208;&#190;&#209;&#128;">
-<g id="Rectangle 273" filter="url(#filter0_d_98_58)">
-<path d="M-30 -232C-30 -248.569 -16.5685 -262 0 -262H280C296.569 -262 310 -248.569 310 -232V148C310 164.569 296.569 178 280 178H7.62939e-06C-16.5685 178 -30 164.569 -30 148V-232Z" fill="white"/>
-</g>
-<g id="M-input size">
-<g id="&#208;&#146;&#208;&#178;&#208;&#190;&#208;&#180;_&#209;&#128;&#208;&#176;&#208;&#183;&#208;&#188;&#208;&#181;&#209;&#128;">
-<g id="line">
-<path id="Line 52" d="M19.999 18H241.999" stroke="#8A675F"/>
-<path id="Vector 198" d="M20.0439 14.1514V21.9908" stroke="#8A675F"/>
-</g>
-<g id="picto">
-<g id="p_width">
-<g id="Group 7301" opacity="0.3">
-<g id="Group 7296">
-<g id="arrow">
-<path id="Vector 193" d="M12.8008 19.9274V16.0859L19.0132 18.0067L12.8008 19.9274Z" fill="#B1A19D"/>
-</g>
-<path id="Vector 195" d="M13.4216 18.0068L2.23926 18.0068" stroke="#B1A19D" stroke-width="0.926952" stroke-linejoin="round" stroke-dasharray="0.09 1.85"/>
-</g>
-<path id="Vector 193_2" d="M4.175 6.09766L0.375 6.09766L2.275 0.719644L4.175 6.09766Z" fill="#B1A19D"/>
-<path id="Vector 195_2" d="M2.23828 5.20107L2.23828 18.0059" stroke="#B1A19D" stroke-width="0.926952" stroke-linejoin="round" stroke-dasharray="0.09 1.85"/>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-<defs>
-<filter id="filter0_d_98_58" x="-75" y="-272" width="410" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="-10" dy="25"/>
-<feGaussianBlur stdDeviation="17.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.670833 0 0 0 0 0.328821 0 0 0 0 0.220816 0 0 0 0.05 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_98_58"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_98_58" result="shape"/>
-</filter>
-</defs>
+<path d="M10.7266 20.827L10.7266 14.4004L21.309 17.6137L10.7266 20.827Z" fill="#8A675F"/>
+<path d="M18.6635 17.6133L0.805664 17.6133" stroke="#8A675F" stroke-width="0.969924"/>
 </svg>

@@ -105,7 +105,6 @@ const bodyElem = document.querySelector('body')
 
 function popupElementsClear() {
 	document.body.classList.remove('menu-show')
-	document.body.classList.remove('filter-show')
 	document.body.classList.remove('search-show')
 	popupElements.forEach(element => element.classList.remove('popup-right'))
 }
@@ -224,6 +223,107 @@ for (i = 0;i < menuButton.length;i++) {
 
 
 $(document).ready(function () {
+	
+	
+	//article more
+	$('.js-text-more-toggle').on('click', function() {
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active').parents('.article-box').find('.text-hidden-wrap').slideUp(200);
+		} else {
+			$(this).addClass('active').parents('.article-box').find('.text-hidden-wrap').slideDown(200);
+		}
+		return false;
+	})
+	
+	
+	//sort
+	$('.js-popup-sort').on('click', '.js-btn-sort', function() {
+		if ($(this).hasClass('active-up')) {
+			$(this).removeClass('active-up').addClass('active')
+			console.log('a-up')
+		} else if ($(this).hasClass('active')) {
+			$(this).removeClass('active').addClass('active-up')
+			console.log('a')
+		} else {
+			console.log('else')
+			$(this).parents('.menu').find('.active').removeClass('active');
+			$(this).parents('.menu').find('.active-up').removeClass('active-up');
+			$(this).addClass('active');
+		}
+		return false;
+	})
+	
+	
+	//filter
+	$('.js-filter-toggle').on('click', function() {
+		$('body').toggleClass('filter-show');
+		$(this).toggleClass('filter-show');
+		return false;
+	})
+
+	//btn tgl
+	$('.js-btn-tgl:not(.tgl-one)').on('click', function () {
+		$(this).toggleClass('active');
+		return false;
+	})
+	$('.js-btn-tgl.tgl-one').on('click', function () {
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).parents('.tgl-wrap').find('.js-btn-tgl.active').removeClass('active');
+			$(this).addClass('active');
+		}
+		return false;
+	})
+	
+	//history toggle
+	$('.history-box .button-toggle').on('click', function() {
+		if ($(this).parents('.history-box').hasClass('active')) {
+			$(this).parents('.history-box').removeClass('active').find('.content-inner-wrap').slideUp(200);
+		} else {
+			$(this).parents('.history-box').addClass('active').find('.content-inner-wrap').slideDown(200);
+		}
+		return false;
+	})
+
+	//content toggle action
+	$('input[data-content]').each(function () {
+		if ($(this).is(':checked')) {
+			let selectContent = $(this).attr('data-content');
+			$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+		}
+	})
+	$('input[data-content-check]').each(function () {//or data-content-uncheck
+		if ($(this).is(':checked')) {
+			let selectContent = $(this).attr('data-content-check');
+			$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+		} else {
+			let selectContent = $(this).attr('data-content-uncheck');
+			$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+		}
+	})
+	$('input[data-content], input[data-content-check]').on('click', function () {
+		$('.frm-content.active').removeClass('active');
+		$('input[data-content]').each(function () {
+			if ($(this).is(':checked')) {
+				let selectContent = $(this).attr('data-content');
+				$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+			}
+		})
+		if ($(this).is(':checked')) {
+			let selectContent = $(this).attr('data-content-check');
+			$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+		} else {
+			let selectContent = $(this).attr('data-content-uncheck');
+			$('.frm-content[data-content="' + selectContent + '"]').addClass('active');
+		}
+	})
+	$('.btn[data-content]').on('click', function () {
+		let dataContent = $(this).attr('data-content');
+		$(this).attr('disabled', 'disabled');
+		$('.frm-content[data-content="' + dataContent + '"]').slideDown(200);
+		return false;
+	})
 
 	//animate anchor scroll
 	$('.js-anchor-button').on("click", function (e) {
@@ -446,4 +546,32 @@ $(document).ready(function () {
 		return false
 	})
 	cardSelected()
+
+
+	//item-tile-catalog
+	if (!!$('.item-tile-catalog').offset()) {
+		$('.item-tile-catalog .tile-slider').slick({
+			dots: true,
+			slidesToShow: 1,
+			variableWidth: false,
+			infinite: true,
+			adaptiveHeight: false,
+			rows: 1,
+			swipeToSlide: true,
+			autoplay: false,
+			autoplaySpeed: 5000,
+			prevArrow: false,
+			nextArrow: false,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						dots: false,
+					}
+				},
+			]
+		});
+
+	}
+	
 });
