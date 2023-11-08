@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="33c1e436-f245-4d66-b94e-65d1b59486dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_html/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/_html/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/content.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/content.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/forms.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/forms.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/inputs.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/inputs.less" afterDir="false" />
@@ -15,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/css/less/structura.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/structura.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icons/inp-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/inp-left.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
     </list>
@@ -116,7 +117,8 @@
       <workItem from="1698901717795" duration="57000" />
       <workItem from="1698902070187" duration="15152000" />
       <workItem from="1698990173032" duration="9117000" />
-      <workItem from="1699080668658" duration="13187000" />
+      <workItem from="1699080668658" duration="43129000" />
+      <workItem from="1699452211496" duration="2896000" />
     </task>
     <servers />
   </component>

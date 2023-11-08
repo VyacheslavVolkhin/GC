@@ -10,6 +10,32 @@
         border-color: #C35C74 !important;
         color: #C35C74 !important;
     }
+    &.inp-valid {
+        border-color: #70958C !important;
+        color: #70958C !important;
+        &:not(.form-input-rows) {
+            padding-right: 45px;
+            background-image: url(../img/icons/valid.svg);
+            background-position: right 15px center;
+            background-size: 30px auto;
+            background-repeat: no-repeat;
+        }
+    }
+    &.form-input-button {
+        height: 45px;
+        padding: 0 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+        line-height: 18px;
+        color: var(--clr-att);
+        border: 1px solid var(--clr-att);
+        background-color: #FFFAF9;
+        &[placeholder]::-webkit-input-placeholder {color: var(--clr-att);}
+        &[placeholder]:-moz-placeholder {color: var(--clr-att);}
+        &[placeholder]::-moz-placeholder {color: var(--clr-att);}
+        &[placeholder]:-ms-input-placeholder {color: var(--clr-att);}
+    }
     &.form-input-rows {
         border: none;
         font-weight: 400;
@@ -33,12 +59,18 @@
         &.inp-error {
             background-image:  repeating-linear-gradient(0deg, #C35C74, #C35C74 1px, transparent 1px, transparent);
         }
+        &.inp-valid {
+            background-image:  repeating-linear-gradient(0deg, #70958C, #70958C 1px, transparent 1px, transparent), url(../img/icons/valid.svg);
+            background-position: 0 0, right center;
+            background-size: 50px 50px, 30px auto;
+            background-repeat: repeat, no-repeat;
+        }
     }
 }
 textarea.form-input {
     &.form-input-rows {
         height: 100px;
-        padding-top: 15px;
+        padding-top: 10px;
     }
 }
 select.form-input {
@@ -101,6 +133,15 @@ select.form-input:required:invalid {
     font-weight: 400;
     padding: 0 4rem;
     border-radius: 30px;
+    &.button-medium {
+        height: 45px;
+        border-radius: 30px;
+        padding: 0 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.14px;
+    }
     &.button-download, &.button-toggle {
         &:before {
             content: "";
@@ -158,7 +199,7 @@ select.form-input:required:invalid {
             }
         }
     }
-    &.button-arrow {
+    &.button-arrow, &.button-arrow-left {
         &:before {
             content: "";
             display: block;
@@ -166,11 +207,17 @@ select.form-input:required:invalid {
             height: 24px;
             position: absolute;
             background: url(../img/icons/arrow-button.svg) center no-repeat;
-            background-size: 100% auto;
             top: 50%;
             right: 30px;
             margin: -12px -12px 0 0;
             background-size: 20px auto;
+        }
+    }
+    &.button-arrow-left {
+        &:before {
+            right: auto;
+            left: 30px;
+            .t-rotate(180deg);
         }
     }
     &.button-light {
@@ -595,12 +642,26 @@ select.form-input:required:invalid {
 }
 @media (min-width: 1024px) {
     .form-input {
+        &.form-input-button {
+            height: 60px;
+            padding: 0 29px;
+            font-size: 19px;
+            line-height: 24px;
+            letter-spacing: -0.196px;
+            border-width: 2px;
+        }
         &.form-input-rows {
             font-size: 19px;
             letter-spacing: -0.196px;
             background-image:  repeating-linear-gradient(0deg, var(--clr-att), var(--clr-att) 2px, transparent 2px, transparent);
             &.inp-error {
                 background-image:  repeating-linear-gradient(0deg, #C35C74, #C35C74 2px, transparent 2px, transparent);
+            }
+            &.inp-valid {
+                background-image:  repeating-linear-gradient(0deg, #70958C, #70958C 2px, transparent 2px, transparent), url(../img/icons/valid.svg);
+                background-position: 0 0, right center;
+                background-size: 50px 50px, 34px auto;
+                background-repeat: repeat, no-repeat;
             }
         }
     }
@@ -610,6 +671,13 @@ select.form-input:required:invalid {
         font-size: 2.3rem;
         letter-spacing: -0.23px;
         border-width: 2px;
+        &.button-medium {
+            height: 60px;
+            padding: 0 29px;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: -0.188px;
+        }
         &.button-reset {
             &:before {
                 width: 32px;
@@ -621,6 +689,12 @@ select.form-input:required:invalid {
         &.button-arrow {
             &:before {
                 right: 40px;
+                background-size: 24px auto;
+            }
+        }
+        &.button-arrow-left {
+            &:before {
+                left: 40px;
                 background-size: 24px auto;
             }
         }
