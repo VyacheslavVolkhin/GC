@@ -169,6 +169,11 @@ a.link-main, .link-main {
         border-radius: 20px;
         background: var(--clr-bg-light);
     }
+    &.att-second {
+        &:before {
+            background: linear-gradient(88deg, #FFDE00 -107.66%, #FEE2AB 31.14%, #FEECC2 150.09%);
+        }
+    }
 }
 h1, .h1-title,
 h2, .h2-title,
@@ -182,6 +187,23 @@ h6, .h6-title {
     margin: 1em 0;
     &:first-child {
         margin-top: 0;
+    }
+    &[data-count]:after {
+        content: attr(data-count);
+        height: 20px;
+        line-height: 20px;
+        padding: 0 6px;
+        border-radius: 11px;
+        background-color: #F5E2D9;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.96px;
+        color: var(--clr-att);
+        font-style: normal;
+        z-index: 2;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 6px;
     }
 }
 .h1-title, h1 {
@@ -232,6 +254,21 @@ h6, .h6-title {
 @media (min-width: 1024px) {
     :root {
         --paddingContainer: 30px;
+    }
+    h1, .h1-title,
+    h2, .h2-title,
+    h3, .h3-title,
+    h4, .h4-title,
+    h5, .h5-title,
+    h6, .h6-title {
+        &[data-count]:after {
+            height: 29px;
+            line-height: 29px;
+            border-radius: 15px;
+            padding: 0 8px;
+            font-size: 17px;
+            letter-spacing: -1.367px;
+        }
     }
     .link-arrow {
         font-size: 13px;

@@ -322,101 +322,492 @@
             <!--/breadcrumbs-box-->
 
             <!--card-box-->
-            <div class="card-box">
+            <div class="card-box card-second">
 
                 <!--card-info-wrap-->
                 <div class="card-info-wrap">
 
-                    <div class="photos-content-wrap">
-                        <!--photos-inner-wrap-->
-                        <div class="photos-inner-wrap">
-                            <div class="photos-slider-box">
-                                <div class="slider-wrap">
-                                    <div class="slider">
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-popup="popup-gallery">
-                                                <img src="./img/card01.jpg" alt="">
-                                            </div>
-                                            <a href="" class="js-popup-open btn-popup" data-popup="popup-gallery"></a>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-popup="popup-gallery">
-                                                <img src="./img/card02.jpg" alt="">
-                                            </div>
-                                            <a href="" class="js-popup-open btn-popup" data-popup="popup-gallery"></a>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-popup="popup-gallery">
-                                                <img src="./img/card01.jpg" alt="">
-                                            </div>
-                                            <a href="" class="js-popup-open btn-popup" data-popup="popup-gallery"></a>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-popup="popup-gallery">
-                                                <img src="./img/card02.jpg" alt="">
-                                            </div>
-                                            <a href="" class="js-popup-open btn-popup" data-popup="popup-gallery"></a>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-popup="popup-gallery">
-                                                <img src="./img/card01.jpg" alt="">
-                                            </div>
-                                            <a href="" class="js-popup-open btn-popup" data-popup="popup-gallery"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-preview-wrap">
-                                    <div class="slider">
-                                        <div class="sl-wrap active">
-                                            <div class="elm-photo photo-contain" data-slide="0">
-                                                <img src="./img/card01.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-slide="1">
-                                                <img src="./img/card02.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-slide="2">
-                                                <img src="./img/card01.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-slide="3">
-                                                <img src="./img/card04.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="sl-wrap">
-                                            <div class="elm-photo photo-contain" data-slide="4">
-                                                <img src="./img/card05.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/photos-inner-wrap-->
-
-                        <!--photos-info-inner-wrap-->
-                        <div class="photos-info-inner-wrap">
-                            <div class="size-inner-wrap">
-                                <div class="size-wrap"><i>Длина:</i> 350 мм</div>
-                                <div class="size-wrap"><i>Ширина:</i> 350 мм</div>
-                                <div class="size-wrap"><i>Высота:</i> 55 мм</div>
-                            </div>
-                            <div class="stickers-inner-wrap">
-                                <div class="elm-sticker color-second st-ico">
-                                    <div class="elm-ico">
-                                        <img src="./img/icons/attention.svg" alt="">
-                                    </div>
-                                    на фото — не&nbsp;точные размеры
-                                </div>
-                                <div class="elm-sticker">внутренние размеры</div>
-                            </div>
-                        </div>
-                        <!--/photos-info-inner-wrap-->
+                    <div class="title-inner-wrap">
+                        <h1 class="h1-title">Изготовить на заказ</h1>
                     </div>
+
+                    <!--form-outer-wrap-->
+                    <div class="form-outer-wrap">
+                        <!--top-form-inner-wrap-->
+                        <div class="top-form-inner-wrap">
+                            <div class="frm-info-panel">1. Начните с заполнения размеров (в мм)</div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="frm-field-input">
+                                        <div class="field-input-content">
+                                            <input type="text" class="form-input" placeholder="Введите длину">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-field">
+                                    <div class="frm-field-input">
+                                        <div class="field-input-content">
+                                            <input type="text" class="form-input" placeholder="Введите ширину">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-field">
+                                    <div class="frm-field-input">
+                                        <div class="field-input-content">
+                                            <input type="text" class="form-input" placeholder="Введите высоту">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/top-form-inner-wrap-->
+
+                        <!--middle-form-inner-wrap-->
+                        <div class="middle-form-inner-wrap">
+                            <!--frm-section-wrap-->
+                            <div class="frm-section-wrap">
+                                <div class="frm-section-title">2. Выберите тип:</div>
+                                <div class="frm-section-content">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="frm-select-wrap select-full js-popup-wrap">
+                                                <a href="" class="btn button-toggle button-border btn-popup-toggle js-btn-popup-toggle">
+                                                    <span class="button-title">Выберите конструкцию</span>
+                                                </a>
+                                                <div class="select-content-block menu-select js-popup-block">
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <div class="frm-select-photo">
+                                                                <input type="checkbox" id="photo01">
+                                                                <label for="photo01">
+                                                                    <span class="elm-photo photo-container">
+                                                                        <img src="./img/chk01.png" alt="">
+                                                                    </span>
+                                                                    <span class="elm-ico">
+                                                                        <img src="./img/icons/pig.svg" alt="">
+                                                                    </span>
+                                                                    <span class="lbl-title">Четырехклапанная FEFCO&nbsp;0211</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-photo">
+                                                                <input type="checkbox" id="photo02" checked="">
+                                                                <label for="photo02">
+                                                                    <span class="elm-photo photo-container">
+                                                                        <img src="./img/chk02.png" alt="">
+                                                                    </span>
+                                                                    <span class="lbl-title">Ласточкин хвост FEFCO&nbsp;0211</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-photo">
+                                                                <input type="checkbox" id="photo03">
+                                                                <label for="photo03">
+                                                                    <span class="elm-photo photo-container">
+                                                                        <img src="./img/chk03.png" alt="">
+                                                                    </span>
+                                                                    <span class="lbl-title">Крышка-дно FEFCO&nbsp;0211</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-photo">
+                                                                <input type="checkbox" id="photo04">
+                                                                <label for="photo04">
+                                                                    <span class="elm-photo photo-container">
+                                                                        <img src="./img/chk01.png" alt="">
+                                                                    </span>
+                                                                    <span class="lbl-title">Самосборная шкатулка FEFCO&nbsp;0211</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="menu-select-wrap">
+                                                        <div class="frm-select-toggle type-clear">
+                                                            <input type="checkbox" id="cons2">
+                                                            <label for="cons2">
+                                                                <span class="lbl-inner-wrap">
+                                                                    <span class="lbl-title">нужна консультация менеджера</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="select-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field">
+                                            <div class="frm-select-wrap js-popup-wrap">
+                                                <a href="" class="btn button-toggle button-border btn-popup-toggle js-btn-popup-toggle">
+                                                    <span class="button-title">Выбрать другой тип</span>
+                                                </a>
+                                                <div class="select-content-block menu-chk-photo js-popup-block">
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type01">
+                                                                <label for="type01">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type02">
+                                                                <label for="type02">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type03">
+                                                                <label for="type03">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type04">
+                                                                <label for="type04">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type05">
+                                                                <label for="type05">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type06">
+                                                                <label for="type06">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type07">
+                                                                <label for="type07">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type08">
+                                                                <label for="type08">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type09">
+                                                                <label for="type09">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type10">
+                                                                <label for="type10">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type11">
+                                                                <label for="type11">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type12">
+                                                                <label for="type12">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type13">
+                                                                <label for="type13">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type14">
+                                                                <label for="type14">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type15">
+                                                                <label for="type15">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type16">
+                                                                <label for="type16">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk01.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type17">
+                                                                <label for="type17">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk02.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check select-photo">
+                                                                <input type="checkbox" id="type18">
+                                                                <label for="type18">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">FEFCO 0210</span>
+                                                                    </span>
+                                                                    <span class="elm-photo photo-contain">
+                                                                        <img src="./img/chk03.jpg" alt="">
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="select-overlay"></div>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field">
+                                            <div class="frm-select-wrap js-popup-wrap">
+                                                <a href="" class="btn button-toggle button-border btn-popup-toggle js-btn-popup-toggle">
+                                                    <span class="button-title">Выберите тип картона</span>
+                                                </a>
+                                                <div class="select-content-block menu-chk js-popup-block">
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <div class="frm-select-check">
+                                                                <input type="checkbox" id="t01">
+                                                                <label for="t01">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">Т24 — толщина 3 мм</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check">
+                                                                <input type="checkbox" id="t02">
+                                                                <label for="t02">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">П32 — толщина 6 мм</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="frm-select-check">
+                                                                <input type="checkbox" id="t03">
+                                                                <label for="t03">
+                                                                    <span class="lbl-inner-wrap">
+                                                                        <span class="lbl-title">МГК</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="menu-select-wrap">
+                                                        <div class="frm-select-toggle type-clear">
+                                                            <input type="checkbox" id="cons">
+                                                            <label for="cons">
+                                                                <span class="lbl-inner-wrap">
+                                                                    <span class="lbl-title">нужна консультация менеджера</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="select-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/frm-section-wrap-->
+                            <!--frm-section-wrap-->
+                            <div class="frm-section-wrap section-checks">
+                                <div class="frm-section-title">3. Выберите цвет:</div>
+                                <div class="frm-section-content">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="frm-select-check">
+                                                <input type="checkbox" id="color01" checked>
+                                                <label for="color01">Бурый</label>
+                                            </div>
+                                            <div class="frm-select-check">
+                                                <input type="checkbox" id="color02">
+                                                <label for="color02">Белый</label>
+                                            </div>
+                                            <div class="frm-select-check">
+                                                <input type="checkbox" id="color03" checked>
+                                                <label for="color03">Другой цвет</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/frm-section-wrap-->
+                        </div>
+                        <!--/middle-form-inner-wrap-->
+                    </div>
+                    <!--/form-outer-wrap-->
+
+                    <!--bottom-form-inner-wrap-->
+                    <div class="bottom-form-inner-wrap">
+                        <!--frm-section-wrap-->
+                        <div class="frm-section-wrap section-counter">
+                            <div class="frm-section-title">Введите тираж:</div>
+                            <div class="frm-section-content">
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="frm-field-counter">
+                                            <input type="number" class="form-input" value="9811">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/frm-section-wrap-->
+                    </div>
+                    <!--/bottom-form-inner-wrap-->
+
+                    <!--infos-outer-wrap-->
+                    <div class="infos-outer-wrap">
+                        <!--infos-inner-wrap-->
+                        <div class="infos-inner-wrap infos01">
+                            <div class="infos-title">Срок изготовления тиража&nbsp;—&nbsp;5&nbsp;дней.</div>
+                            <div class="elm-photo photo-contain">
+                                <img src="./img/infos01.png" alt="">
+                            </div>
+                        </div>
+                        <!--/infos-inner-wrap-->
+
+                        <!--infos-inner-wrap-->
+                        <div class="infos-inner-wrap infos02">
+                            <div class="infos-title">Штамп — разовый платеж. <br>Срок изготовления — 7 дней.</div>
+                            <div class="elm-photo photo-contain">
+                                <img src="./img/infos02.png" alt="">
+                            </div>
+                        </div>
+                        <!--/infos-inner-wrap-->
+                    </div>
+                    <!--/infos-outer-wrap-->
 
                 </div>
                 <!--/card-info-wrap-->
@@ -424,89 +815,21 @@
                 <!--card-info-wrap-->
                 <div class="card-info-wrap">
 
+                    <!--photo-inner-wrap-->
+                    <div class="photo-inner-wrap">
+                        <div class="elm-photo photo-contain">
+                            <img src="./img/card-photo.jpg" alt="">
+                            <div class="elm-size-input size01">350</div>
+                            <div class="elm-size-input size02">300</div>
+                            <div class="elm-size-input size03">280</div>
+                        </div>
+                    </div>
+                    <!--/photo-inner-wrap-->
+
                     <!--info-inner-wrap-->
                     <div class="info-inner-wrap">
-                        <div class="title-inner-wrap">
-                            <h1 class="h1-title">Самосборная коробка <br>350 х 350 х 55 мм</h1>
-                        </div>
                         <div class="features-inner-wrap">
-                            <div class="feature-row">
-                                <div class="row-title">Наличие:</div>
-                                <div class="row-value">
-                                    <div class="elm-sticker color-third" data-count="538">в наличии</div>
-                                </div>
-                            </div>
-                            <div class="feature-row">
-                                <div class="row-title">Артикул:</div>
-                                <div class="row-value">14537</div>
-                            </div>
-                            <div class="feature-row">
-                                <div class="row-title">Конструкция:</div>
-                                <div class="row-value">FEFCO 0211</div>
-                            </div>
-                            <div class="feature-row">
-                                <div class="row-title">Тип картона:</div>
-                                <div class="row-value">Т-24 3 мм</div>
-                            </div>
-                            <div class="feature-row">
-                                <div class="row-title">Выберите цвет:</div>
-                                <div class="row-value">
-                                    <div class="row-select-wrap">
-                                        <div class="frm-select-color">
-                                            <input type="radio" name="color" id="color01">
-                                            <label for="color01">
-                                                <span class="elm-ico">
-                                                    <img src="./img/color01.jpg" alt="">
-                                                </span>
-                                                <span class="lbl-title">Бурый</span>
-                                            </label>
-                                        </div>
-                                        <div class="frm-select-color">
-                                            <input type="radio" name="color" id="color02" checked>
-                                            <label for="color02">
-                                                <span class="elm-ico">
-                                                    <img src="./img/color02.jpg" alt="">
-                                                </span>
-                                                <span class="lbl-title">Белый</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="feature-row row-desc">
-                                <div class="row-title">Описание:</div>
-                                <div class="row-value">Вместительная коробка с&nbsp;ручками, предна-значена для&nbsp;перевозки тяжелых вещей (весом до&nbsp;50кг). При&nbsp;офисном переезде отлично подойдет для&nbsp;архивных папок (вмещает 6&nbsp;боль-ших и&nbsp;8&nbsp;маленьких).</div>
-                            </div>
-                            <div class="feature-row">
-                                <div class="row-title">Товар доступен:</div>
-                                <div class="row-value">
-                                    <div class="row-tiles-wrap">
-                                        <div class="elm-ico">
-                                            <img src="./img/card-ozon.jpg" alt="">
-                                        </div>
-                                        <div class="elm-ico">
-                                            <img src="./img/card-market.jpg" alt="">
-                                        </div>
-                                        <div class="elm-ico">
-                                            <img src="./img/card-wb.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="rows-inner-wrap">
-                                <div class="feature-row row-count">
-                                    <div class="row-title">Введите тираж:</div>
-                                    <div class="row-value">
-                                        <div class="row-counter-wrap">
-                                            <div class="frm-field-counter">
-                                                <input type="number" class="form-input" value="9811">
-                                            </div>
-                                        </div>
-                                        <div class="row-action-wrap">
-                                            <a href="" class="btn btn-action-ico ico-cart"></a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="rows-right-wrap">
                                     <div class="feature-row row-head">
                                         <div class="row-title">При количестве</div>
@@ -643,6 +966,10 @@
                                     <div class="row-title">Стоимость коробок:</div>
                                     <div class="row-value">1 232.1 ₽</div>
                                 </div>
+                                <div class="feature-row row-d">
+                                    <div class="row-title">Примерная стоимость штампа:</div>
+                                    <div class="row-value">1 232.1 ₽</div>
+                                </div>
                                 <div class="feature-row">
                                     <div class="row-title">Стоимость печати:</div>
                                     <div class="row-value">+ 2 232.1 ₽</div>
@@ -662,7 +989,7 @@
                                 <span class="button-ico">
                                     <img src="./img/icons/cart-button.svg" alt="">
                                 </span>
-                                <span class="button-title">Положить в корзину</span>
+                                <span class="button-title">Положить заявку в корзину</span>
                             </a>
                         </div>
                     </div>
@@ -673,6 +1000,35 @@
 
             </div>
             <!--/card-box-->
+
+            <!--card-info-box-->
+            <div class="card-info-box">
+                <div class="title-inner-wrap">
+                    <h2 class="h1-title" data-count="538">Варианты готовых решений</h2>
+                    <p>Смотреть готовые штанцформы близкого размера <br>Для них штамп не требуется.</p>
+                </div>
+                <div class="photos-inner-wrap">
+                    <div class="photo-wrap">
+                        <a href="" class="elm-photo photo-contain">
+                            <img src="./img/ext01.png" alt="">
+                        </a>
+                    </div>
+                    <div class="photo-wrap">
+                        <a href="" class="elm-photo photo-contain">
+                            <img src="./img/ext02.png" alt="">
+                        </a>
+                    </div>
+                    <div class="photo-wrap">
+                        <a href="" class="elm-photo photo-contain">
+                            <img src="./img/ext03.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="action-inner-wrap">
+                    <a href="" class="btn button-border button-arrow">Смотреть все варианты</a>
+                </div>
+            </div>
+            <!--/card-info-box-->
 
         </div>
         <!-- /page -->
@@ -1246,6 +1602,7 @@
                 </div>
             </div>
         </div><!--/popup-outer-box-->
+
 
 
     </div>

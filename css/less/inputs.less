@@ -536,6 +536,31 @@ select.form-input:required:invalid {
         }
     }
 }
+.btn-action-more-toggle {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 16px;
+    &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 15px;
+        position: absolute;
+        background: url(../img/icons/arrow-more-toggle.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 50%;
+        left: 0;
+        margin-top: -8px;
+    }
+    .button-title {
+        display: block;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid;
+    }
+}
 .btn-action-more {
     display: block;
     text-align: center;

@@ -137,7 +137,7 @@
                                         </a>
                                     </li>
                                     <li class="link elm-hidden-mobile">
-                                        <a href="" class="btn-menu">
+                                        <a href="" class="btn-menu js-popup-open" data-popup="popup-contacts">
                                             <span class="button-title">Контакты</span>
                                         </a>
                                     </li>
@@ -145,7 +145,7 @@
                             </div>
                         </div>
                         <div class="popup-contacts-wrap js-popup-wrap">
-                            <a href="" class="btn-popup button-header js-btn-popup-toggle">
+                            <a href="" class="btn-popup button-header js-popup-open" data-popup="popup-contacts">
                                 <span class="button-ico">
                                     <img src="./img/icons/contacts.svg" alt="">
                                 </span>
@@ -170,7 +170,7 @@
                                             8:00 — 20:00
                                         </div>
                                         <div class="cnt-wrap">
-                                            <span class="link-att">сб—вс</span>
+                                            <span class="link-att att-second">сб—вс</span>
                                             10:00 — 16:00
                                         </div>
                                     </div>
@@ -199,6 +199,102 @@
                 </div>
             </header>
             <!-- /header -->
+
+
+            <div class="popup-outer-box popup-contacts" id="popup-contacts">
+                <div class="popup-box">
+                    <div class="popup-content-wrap">
+                        <div class="popup-content-top">
+                            <div class="cnt-title-wrap">
+                                <div class="h1-title">Контакты</div>
+                                <a href="" class="btn-action-ico ico-arrow js-popup-close"></a>
+                            </div>
+                            <div class="cnt-phone-wrap">
+                                <a href="88123802121" class="link-phone link-att">+7 (812) 380-21-21</a>
+                            </div>
+                            <div class="cnt-items-wrap">
+                                <div class="cnt-item-wrap">
+                                    <div class="cnt-wrap">Санкт-Петербург, <br>ул, Цветочная, 16Г</div>
+                                    <div class="cnt-wrap wrap-email"><a href="mailto:gofrocentr@ya.ru" class="link-email link-att att-second">gofrocentr@ya.ru</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-content-bottom">
+                            <div class="cnt-items-wrap">
+                                <div class="cnt-item-wrap">
+                                    <div class="cnt-wrap">
+                                        <span class="link-att">пн—пт</span>
+                                        8:00 — 20:00
+                                    </div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att att-second">сб—вс</span>
+                                        10:00 — 16:00
+                                    </div>
+                                    <div class="cnt-wrap wrap-text">
+                                        <p>Обработка заявок по&nbsp;индивидуальным размерам:</p>
+                                    </div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att">пн—пт</span>
+                                        8:00 — 20:00
+                                    </div>
+                                </div>
+                                <div class="cnt-item-wrap elm-hidden-mobile">
+                                    <div class="cnt-wrap">Санкт-Петербург, <br>ул, Цветочная, 16Г</div>
+                                    <div class="cnt-wrap"><a href="mailto:gofrocentr@ya.ru">gofrocentr@ya.ru</a></div>
+                                </div>
+                                <div class="cnt-item-wrap wrap-full">
+                                    <div class="top-message-box">
+                                        <div class="elm-ico">
+                                            <img src="./img/icons/info.svg" alt="">
+                                        </div>
+                                        <div class="ms-title">7 и 10&nbsp;мая — праздничные дни 11&nbsp;мая&nbsp;— рабочий день</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cnt-items-wrap">
+                                <div class="cnt-item-wrap">
+                                    <div class="cnt-title">Въезд с ул. Цветочная:</div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att">пн—пт</span>
+                                        8:00 — 20:00
+                                    </div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att att-second">сб—вс</span>
+                                        10:00 — 16:00
+                                    </div>
+                                </div>
+                                <div class="cnt-item-wrap">
+                                    <div class="cnt-title">Въезд с ул. Заставская:</div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att">пн—пт</span>
+                                        8:00 — 20:00
+                                    </div>
+                                    <div class="cnt-wrap">
+                                        <span class="link-att att-second">сб—вс</span>
+                                        10:00 — 16:00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-content-action">
+                            <div class="cnt-action">
+                                <a href="" class="btn-action-more-toggle">
+                                    <span class="button-title">Схема проезда </span>
+                                </a>
+                            </div>
+                            <div class="cnt-action-info">
+                                <div class="elm-ico">
+                                    <img src="./img/icons/card-info.svg" alt="">
+                                </div>
+                                <p>На проходной завода вас&nbsp;попросят предъявить паспорт или в/у</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-map-wrap">
+                        <img src="./img/map-popup.jpg" alt="" class="img-bg-cover">
+                    </div>
+                </div>
+            </div><!--/popup-outer-box-->
 
             <!--header-nav-box-->
             <div class="header-nav-box">
@@ -1397,6 +1493,8 @@
             <!--/footer-bottom-panel-->
         </footer>
         <!-- /footer -->
+
+
 
     </div>
     <!-- /wrap -->
