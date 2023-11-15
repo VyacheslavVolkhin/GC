@@ -53,6 +53,9 @@
 .ext-tiles-box {
     margin-bottom: 0;
 }
+.sort-panel-box {
+    
+}
 .orders-box {
     margin-bottom: 50px;
     .sort-panel-box {
@@ -335,6 +338,27 @@
         }
     }
     &.lk-form-box {
+        .row-sep {
+            margin-top: 50px;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            margin-bottom: 0px;
+            position: relative;
+            &:before, &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -30px;
+                right: -30px;
+                height: 1px;
+                background-color: #F6EFEE;
+            }
+            &:before {
+                top: auto;
+                bottom: 0;
+            }
+        }
         .frm-section-content {
             padding: 0;
             border-radius: 0;
@@ -1061,6 +1085,9 @@
     }
 }
 .arx-box {
+    .title-box {
+        padding-left: 0;
+    }
     .item-wrap {
         margin-bottom: 10px;
         &:last-child {
@@ -1634,6 +1661,7 @@
         position: relative;
         color: var(--clr-att);
         margin: 0;
+        padding: 0 50px 0 0;
         background-size: 30px 30px;
         background-image:  repeating-linear-gradient(0deg, var(--clr-att), var(--clr-att) 1px, transparent 1px, transparent);
     }
@@ -1742,6 +1770,9 @@
         &[data-count]:after {
             margin-right: -8px;
             background: #FFDE00;
+        }
+        &.att-second {
+            background: linear-gradient(268deg, #FFDE00 -56.72%, #FEE3DC 124.02%);
         }
     }
     .button-ico {
@@ -3047,6 +3078,7 @@ body.popup-open {
         &.ico-close {
             width: 6rem;
             height: 6rem;
+            z-index: 30;
             &:before, &:after {
                 width: 5rem;
                 height: 2px;
@@ -3058,6 +3090,16 @@ body.popup-open {
 }
 .popup-open {
     overflow: hidden;
+}
+.more-wrap {
+    .btn {
+        [data-show]:before {
+            content: attr(data-show);
+        }
+    }
+}
+.show-all+.more-wrap .btn [data-show]:before {
+    content: attr(data-hide);
 }
 @media (max-width: 1899px) {
 
@@ -3648,6 +3690,11 @@ body.popup-open {
     }
 }
 @media (min-width: 640px) {
+    .popup-contacts .popup-content-bottom {
+        br {
+            display: none;
+        }
+    }
     .tiles-main-info-box {
         .item-wrap {
             width: 50%;
@@ -3835,6 +3882,9 @@ body.popup-open {
             flex-shrink: 0;
             padding: 0 0 0 1px;
             margin: 0;
+        }
+        .h1-title {
+            padding-right: 0;
         }
     }
 }
@@ -4175,6 +4225,15 @@ body.popup-open {
             margin: 0;
         }
         &.lk-form-box {
+            .row-sep {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 7rem;
+                padding-bottom: 3rem;
+                &:before, &:after {
+                    display: none;
+                }
+            }
             .frm-section-info {
                 font-size: 20px;
                 line-height: 24px;
@@ -4508,6 +4567,9 @@ body.popup-open {
         }
     }
     .arx-box {
+        .title-box {
+            padding-left: 0;
+        }
         .item-wrap {
             margin-bottom: 17px;
         }
@@ -4568,6 +4630,12 @@ body.popup-open {
         }
     }
     .lk-form-box {
+        .frm-select-toggle-two {
+            min-width: 41.11764706rem;
+            label {
+                justify-content: flex-start;
+            }
+        }
         .frm-row-submit {
             margin: 30px -5rem -7rem -5rem;
             .btn {
@@ -4740,7 +4808,7 @@ body.popup-open {
     .tiles-products-box, .tiles-main-photos-box, .tiles-reviews-box {
         .more-wrap {
             text-align: right;
-            margin: 16px -8px 0 -8px;
+            margin: 16px 0 0 -8px;
             padding-top: 0;
             .btn {
                 min-width: calc(50% - 8px);
@@ -4775,7 +4843,7 @@ body.popup-open {
             margin-right: -16px;
         }
         .items-outer-wrap {
-            margin: 0 -8px;
+            margin: 0 0 0 -8px;
         }
         .items-inner-wrap {
             padding: 0 8px;
@@ -4854,7 +4922,7 @@ body.popup-open {
         border-radius: 0;
         box-shadow: none;
         background: transparent;
-        margin-left: 0;
+        margin-left: -10px;
         margin-right: 0;
         font-size: 2.23rem;
         line-height: 3.06rem;
@@ -5287,10 +5355,15 @@ body.popup-open {
                 flex: 1;
                 max-width: 56rem;
             }
+            .active {
+                &+.frm-select-price {
+                    display: block;
+                }
+            }
             .frm-select-price {
                 color: #545454;
                 white-space: nowrap;
-                display: block;
+                display: none;
                 padding-left: 24px;
             }
         }
@@ -5592,7 +5665,7 @@ body.popup-open {
         }
         .popup-content-top {
             flex-shrink: 0;
-            padding: 0 0 40px 0;
+            padding: 0 0 20px 0;
             .cnt-items-wrap {
                 display: none;
             }
@@ -5629,9 +5702,16 @@ body.popup-open {
                 width: 50%;
                 padding: 0 21px;
                 margin-bottom: 40px;
+                &:first-child {
+                    padding-top: 20px;
+                }
+                &.elm-hidden-mobile {
+                    text-align: right;
+                }
             }
             .wrap-text {
-                margin-top: 30px;
+                margin-top: 50px;
+                margin-bottom: 12px;
                 p {
                     padding-left: 70px;
                 }
@@ -5946,7 +6026,21 @@ body.popup-open {
         }
     }
 }
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .lk-form-box .frm-section-title {
+        padding-left: 0;
+    }
+    .lk-form-box .frm-section-title .h1-title {
+        font-size: 3rem;
+    }
+}
 @media (min-width: 1400px) {
+    .side-menu-box {
+        margin-left: -20px;
+        .button-ico+.button-title {
+            margin-left: 5px;
+        }
+    }
     .card-box {
         .frm-section-wrap {
             display: flex;

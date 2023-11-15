@@ -91,6 +91,24 @@
             position: absolute;
         }
     }
+    .tile-attention {
+        display: inline-block;
+        position: relative;
+        padding: 0 8px;
+        z-index: 2;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -0.1em;
+            bottom: -0.1em;
+            left: 0;
+            right: 0;
+            background: #F5E2D9;
+            z-index: -1;
+            border-radius: 20px;
+        }
+    }
     .tile-title {
         font-size: 37px;
         letter-spacing: -0.752px;
@@ -381,6 +399,7 @@
     }
     .tile-photo-wrap {
         width: 100px;
+        z-index: 8;
     }
     .tile-scale-wrap {
         display: none;
@@ -410,7 +429,21 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding-bottom: 8px;
+        padding-bottom: 5px;
+        li {
+            margin: 0 2px;
+            button {
+                width: 4px;
+                height: 4px;
+                border-radius: 2px;
+                background: #ECDED7;
+            }
+            &.slick-active {
+                button {
+                    background-color: var(--clr-att);
+                }
+            }
+        }
     }
 }
 .item-tile-review {
@@ -702,6 +735,9 @@
     text-align: center;
     padding-bottom: 14px;
     transition: all ease 0.2s;
+    &.tile-action {
+        border-top-right-radius: 0;
+    }
     &.tile-att-01 {
         background-color: #FFDE00;
     }
@@ -1070,13 +1106,13 @@
 }
 .tile-sticker-corner, .elm-sticker-corner {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 100%;
-    margin-left: -75px;
+    margin-left: -70px;
     z-index: 2;
     width: 120px;
-    height: 30px;
-    line-height: 40px;
+    height: 40px;
+    line-height: 60px;
     overflow: hidden;
     .t-rotate(45deg);
     transform-origin: center center;
@@ -1586,6 +1622,15 @@
         overflow: visible;
         &:before {
             display: none;
+        }
+        .slick-dots {
+            li {
+                margin: 0 2px;
+                button {
+                    width: 4px;
+                    height: 4px;
+                }
+            }
         }
         .tile-photo-wrap {
             width: (230/22em);
