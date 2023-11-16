@@ -353,23 +353,66 @@
     display: block;
     position: relative;
     line-height: 1;
-    border-bottom: 2px solid var(--clr-att);
+    &.field-size {
+        padding-left: 22px;
+        .form-input {
+            padding-left: 0;
+        }
+        &:before {
+            display: block;
+        }
+        &:after {
+            display: block;
+        }
+    }
+    &:before {
+        content: "";
+        width: 21px;
+        height: 22px;
+        position: absolute;
+        left: 1px;
+        bottom: -2px;
+        background: url(../img/icons/size01.svg) right bottom no-repeat;
+        background-size: 100% auto;
+        display: none;
+    }
+    &:after {
+        content: "";
+        width: 2px;
+        height: 8px;
+        background: var(--clr-att);
+        position: absolute;
+        bottom: -3px;
+        left: 20px;
+        display: none;
+    }
     &.field-45 {
         &:before {
-            .t-rotate(135deg);
-            bottom: 6px;
+            background-image: url(../img/icons/size02.svg);
+            bottom: -3px;
+        }
+        .field-input-content {
+            &:before {
+                display: none;
+            }
         }
     }
     &.field-90 {
         &:before {
-            .t-rotate(90deg);
-            bottom: 6px;
-            left: -12px;
+            background-image: url(../img/icons/size03.svg);
+            bottom: -3px;
+        }
+        .field-input-content {
+            &:before {
+                display: none;
+            }
         }
     }
     &.inp-clear {
-        &:before, &:after {
-            display: none;
+        .field-input-content {
+            &:before, &:after {
+                display: none;
+            }
         }
         .form-input {
             padding-left: 0;
@@ -383,13 +426,15 @@
             &[placeholder]::-moz-placeholder {color: fade(#8A675F, 30);}
             &[placeholder]:-ms-input-placeholder {color: fade(#8A675F, 30);}
         }
-        &:before, &:after {
-            filter: brightness(0) grayscale(1);
+        .field-input-content {
+            &:before, &:after {
+                filter: brightness(0) grayscale(1);
+            }
         }
     }
     .form-input {
         height: 3.8rem;
-        padding: 0 3rem 0 4.5rem;
+        padding: 0 3rem 0 22px;
         border: none;
         border-radius: 0;
         box-shadow: none;
@@ -414,38 +459,27 @@
     .field-input-content {
         display: block;
         position: static;
-        &:before {
+        border-bottom: 2px solid var(--clr-att);
+        &:before, &:after {
             content: "";
             display: block;
-            width: 34px;
-            height: 32px;
             position: absolute;
-            background: url(../img/icons/inp-left.svg) center no-repeat;
+            background: url(../img/icons/inp-right.svg) center no-repeat;
             background-size: 100% auto;
-            bottom: -6px;
-            left: 0;
             transition: all ease 0.2s;
+            width: 22px;
+            height: 8px;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            .t-rotate(180deg);
+            z-index: 2;
         }
-    }
-    &:before, &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        background: url(../img/icons/inp-right.svg) center no-repeat;
-        background-size: 100% auto;
-        transition: all ease 0.2s;
-        width: 36px;
-        height: 12px;
-        left: 0;
-        right: 0;
-        bottom: -7px;
-        .t-rotate(180deg);
-        z-index: 2;
-    }
-    &:after {
-        left: auto;
-        right: 0;
-        .t-rotate(0deg);
+        &:after {
+            left: auto;
+            right: 0;
+            .t-rotate(0deg);
+        }
     }
 }
 .frm-field-upload {
@@ -1271,6 +1305,39 @@
     }
 }
 @media (min-width: 1024px) {
+    .frm-field-input {
+        &.field-size {
+            padding-left: 29px;
+        }
+        &.field-45 {
+            &:before {
+                bottom: -5px;
+            }
+        }
+        &.field-90 {
+            &:before {
+                bottom: -5px;
+            }
+        }
+        &:before {
+            width: 29px;
+            height: 28px;
+            bottom: -4px;
+        }
+        &:after {
+            height: 10px;
+            bottom: -4px;
+            left: 27px;
+            width: 2px;
+        }
+        .field-input-content {
+            &:before, &:after {
+                width: 31px;
+                height: 12px;
+                bottom: -5px;
+            }
+        }
+    }
     .frm-info-panel {
         font-size: (19/8.5rem);
         letter-spacing: -0.196px;

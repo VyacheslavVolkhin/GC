@@ -224,6 +224,29 @@ for (i = 0;i < menuButton.length;i++) {
 
 $(document).ready(function () {
 	
+
+
+	//side menu
+	if (!!$('.js-side-menu').offset()) {
+		let stickyTop = $('.js-side-menu').offset().top - 30;
+		$(window).scroll(function () {
+			let windowTop = $(window).scrollTop();
+			let sideBottomMax = $(window).outerHeight() + windowTop - $('.js-side-menu-bottom').position().top + 120;
+			let sideBottom = windowTop + $(window).outerHeight() - $('.js-side-menu-bottom').position().top - 60
+			$('.js-side-menu').css('bottom', sideBottom)
+			if (stickyTop < windowTop) {
+				$('.wrap').addClass('side-menu-fixed');
+			} else {
+				$('.wrap').removeClass('side-menu-fixed');
+			}
+			if ($('.js-side-menu').outerHeight() < sideBottomMax) {
+				$('.wrap').addClass('side-menu-fixed-bottom');
+			}  else {
+				$('.wrap').removeClass('side-menu-fixed-bottom');
+			}
+		});
+	}
+	
 	
 	//article more
 	$('.js-text-more-toggle').on('click', function() {
