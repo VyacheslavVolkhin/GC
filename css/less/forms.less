@@ -1094,6 +1094,20 @@ body {
     font-size: 13.8px;
     line-height: 20px;
     color: var(--clr-att);
+    &.color-second {
+        label {
+            &:before {
+                background: #D6C3B9;
+            }
+        }
+    }
+    &.color-third {
+        label {
+            &:before {
+                background: linear-gradient(to top, fade(#FBE1D8, 80) 0%, fade(#FFE38E, 80) 50%, fade(#FFDE00, 80) 100%);
+            }
+        }
+    }
     &.select-small {
         font-size: 12px;
         line-height: 14px;

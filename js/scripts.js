@@ -651,4 +651,16 @@ $(document).ready(function () {
 		}
 	})
 	
+	
+	//field-size enter
+	$('.field-size .form-input').bind('keypress', function(e) {
+		if (e.keyCode == 13) {
+			if ($(this).closest('.frm-field').next('.frm-field').length>0) {
+				$(this).parents('.frm-field').next('.frm-field').find('.form-input').focus();
+			}
+		}
+	})
+	
+	
+	
 });
