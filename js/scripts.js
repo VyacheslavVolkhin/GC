@@ -1,3 +1,8 @@
+//datepicker
+new AirDatepicker('#date-input');
+
+
+
 //js tabs
 const tabsNav = document.querySelectorAll('.js-tabs-nav')
 const tabsBlocks = document.querySelectorAll('.js-tab-block')
@@ -244,8 +249,19 @@ $(document).ready(function () {
 			}  else {
 				$('.wrap').removeClass('side-menu-fixed-bottom');
 			}
+			let idElements = $('.js-side-menu').parents('.page-full').find('[id]')
+			idElements.each(function(index) {
+				if (($(this).offset().top > $(window).scrollTop()) && (($(this).offset().top - $(window).scrollTop()) < 100)) {
+					let curSection = $(this).attr('id');
+					$('.js-side-menu .active').removeClass('active');
+					$('.js-side-menu').find('[href="#'+curSection+'"]').addClass('active');
+					return false;
+				}
+			})
+			
 		});
 	}
+	
 	
 	
 	//article more

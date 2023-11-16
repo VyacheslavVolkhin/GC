@@ -14,5 +14,8 @@
     "postcss": "^8.4.20",
     "postcss-import": "^15.1.0",
     "postcss-plugin": "^1.0.0"
+  },
+  "dependencies": {
+    "air-datepicker": "^3.4.0"
   }
 }

@@ -54,7 +54,26 @@
     margin-bottom: 0;
 }
 .sort-panel-box {
-    
+    .filter-wrap {
+        display: none;
+        .btn {
+            height: 45px;
+            border-radius: 30px;
+            padding: 0 6px 0 15px;
+            font-size: 14px;
+            letter-spacing: -0.136px;;
+            .button-ico {
+                margin: 0 0 0 2px;
+            }
+            &.active {
+                .button-title {
+                    &[data-title]:before {
+                        content: attr(data-title-edit);
+                    }
+                }
+            }
+        }
+    }
 }
 .orders-box {
     margin-bottom: 50px;
@@ -836,7 +855,7 @@
     }
 }
 .filter-box {
-    z-index: 90;
+    z-index: 101;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -3141,6 +3160,67 @@ body.popup-open {
     }
 }
 @media (max-width: 1023px) {
+    .arx-box {
+        .title-outer-wrap {
+            position: relative;
+        }
+        .sort-panel-box {
+            position: absolute;
+            top: 15px;
+            right: 0;
+            margin: -20px 0 0 0;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            .frm-select-wrap {
+                width: 40px;
+                height: 40px;
+                .btn-popup-toggle {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 0;
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    box-shadow: none;
+                    min-width: 0;
+                    .button-title {
+                        display: none;
+                    }
+                    &:before {
+                        display: none;
+                    }
+                    .button-ico {
+                        margin: 0 auto;
+                        position: relative;
+                        top: auto;
+                        bottom: auto;
+                        left: auto;
+                        right: auto;
+                    }
+                }
+                .select-content-block {
+                    width: 300px;
+                    left: auto;
+                    right: 0;
+                    max-width: inherit;
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+    .sort-panel-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .filter-wrap {
+            display: block;
+        }
+        .frm-select-wrap .btn-popup-toggle:not(.active) {
+            border-color: transparent;
+            background: transparent;
+        }
+    }
     .side-menu-box {
         bottom: auto !important;
     }

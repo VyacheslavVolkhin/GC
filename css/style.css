@@ -4019,6 +4019,22 @@ body {
 .ext-tiles-box {
   margin-bottom: 0;
 }
+.sort-panel-box .filter-wrap {
+  display: none;
+}
+.sort-panel-box .filter-wrap .btn {
+  height: 45px;
+  border-radius: 30px;
+  padding: 0 6px 0 15px;
+  font-size: 14px;
+  letter-spacing: -0.136px;
+}
+.sort-panel-box .filter-wrap .btn .button-ico {
+  margin: 0 0 0 2px;
+}
+.sort-panel-box .filter-wrap .btn.active .button-title[data-title]:before {
+  content: attr(data-title-edit);
+}
 .orders-box {
   margin-bottom: 50px;
 }
@@ -4795,7 +4811,7 @@ body {
   margin-top: 10px;
 }
 .filter-box {
-  z-index: 90;
+  z-index: 101;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -7153,6 +7169,67 @@ body.popup-open {
   }
 }
 @media (max-width: 1023px) {
+  .arx-box .title-outer-wrap {
+    position: relative;
+  }
+  .arx-box .sort-panel-box {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    margin: -20px 0 0 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap {
+    width: 40px;
+    height: 40px;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap .btn-popup-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    min-width: 0;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap .btn-popup-toggle .button-title {
+    display: none;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap .btn-popup-toggle:before {
+    display: none;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap .btn-popup-toggle .button-ico {
+    margin: 0 auto;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  .arx-box .sort-panel-box .frm-select-wrap .select-content-block {
+    width: 300px;
+    left: auto;
+    right: 0;
+    max-width: inherit;
+    padding-top: 40px;
+  }
+  .sort-panel-box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .sort-panel-box .filter-wrap {
+    display: block;
+  }
+  .sort-panel-box .frm-select-wrap .btn-popup-toggle:not(.active) {
+    border-color: transparent;
+    background: transparent;
+  }
   .side-menu-box {
     bottom: auto !important;
   }
@@ -11023,6 +11100,127 @@ select.form-input:required:invalid {
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+body .air-datepicker-global-container {
+  font-size: 14px;
+}
+body .air-datepicker-global-container .air-datepicker-nav--action path {
+  stroke: var(--clr-att);
+  stroke-width: 0.8px;
+  font-size: 1em;
+}
+body .air-datepicker-global-container .air-datepicker-nav--action svg {
+  transform: scale(2.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -16px;
+  font-size: 1em;
+}
+body .air-datepicker-global-container .air-datepicker {
+  width: 29.85em;
+  background: #FFFAF9;
+  border: 1px solid #8A675F;
+  box-shadow: 0px 35.42637634px 35.42637634px rgba(161, 95, 47, 0.05);
+  border-radius: 30px;
+  padding: 2em 2em 2em 2em;
+  font-size: 1em;
+}
+body .air-datepicker-global-container .air-datepicker--navigation {
+  border-bottom: 1px solid rgba(239, 229, 228, 0.4);
+  padding: 0;
+  font-size: 1em;
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav {
+  padding: 0 0 5px 0;
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--action {
+  width: 40px;
+  height: 40px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--action:hover {
+  background: none;
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--title {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.13513514;
+  letter-spacing: -0.751px;
+  color: var(--clr-att);
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--title:hover {
+  background: none;
+}
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--title i,
+body .air-datepicker-global-container .air-datepicker--navigation .air-datepicker-nav--title span {
+  color: inherit;
+  font-style: normal;
+  font-size: inherit;
+}
+body .air-datepicker-global-container .air-datepicker--pointer {
+  display: none;
+}
+body .air-datepicker-global-container .air-datepicker--content {
+  padding: 35px 0 0 0;
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: #545454;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body--day-name {
+  font-size: 1em;
+  line-height: 1.2;
+  font-style: italic;
+  color: #B1A19D;
+  text-transform: none;
+  padding-bottom: 1.4em;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body--cells.-days- {
+  grid-auto-rows: 3.2em;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell {
+  position: relative;
+  z-index: 3;
+  color: inherit;
+  height: 2.3em;
+  margin: 0;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-focus- {
+  background: none;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-other-month- {
+  color: inherit;
+  opacity: 0.5;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-current- {
+  color: var(--clr-att);
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-current-:before {
+  display: block;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-selected- {
+  background: none;
+  color: #fff;
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell.-selected-:before {
+  display: block;
+  background: var(--clr-att);
+}
+body .air-datepicker-global-container .air-datepicker--content .air-datepicker-body .air-datepicker-cell:before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.3em;
+  height: 2.3em;
+  border-radius: 50%;
+  border: 1px solid #8A675F;
+  background: #FCF3F0;
+  z-index: -1;
+  margin: -1.15em 0px 0 -1.15em;
+}
 .frm-info-panel {
   display: block;
   background: #FAEDEA;
@@ -12358,6 +12556,17 @@ select.form-input:required:invalid {
   width: 54px;
   height: 54px;
   margin: 0 auto 5px auto;
+}
+@media (max-width: 1023px) {
+  body .air-datepicker-global-container {
+    font-size: 10px;
+  }
+  body .air-datepicker-global-container .air-datepicker {
+    width: 240px;
+  }
+  body .air-datepicker-global-container .air-datepicker-nav--action svg {
+    transform: none;
+  }
 }
 @media (min-width: 768px) {
   .frm-select-color-pic label {
