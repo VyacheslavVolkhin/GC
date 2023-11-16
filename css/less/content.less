@@ -774,6 +774,7 @@
 }
 .cat-info-box {
     margin-bottom: 50px;
+    position: relative;
     .box-inner-wrap {
         border-radius: 20px;
         background: linear-gradient(332deg, #FFDE00 -35.28%, #FEE3BD 41.77%, #FAECE8 92.1%);
@@ -1820,6 +1821,14 @@
         }
         &.active {
             
+        }
+    }
+    .active {
+        .btn-menu-att {
+            background: var(--clr-att);
+            &.att-second {
+                color: var(--clr-att);
+            }
         }
     }
     .btn-menu {

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/** {
+    border: 1px solid #f00 !important;
+}*/
 :root {
   --clr-base: #756B6B;
   --clr-bg-light: #FCF3F0;
@@ -1169,6 +1172,9 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .wrap-hidden {
+    overflow: hidden;
+  }
   .wrap-main .footer {
     margin-top: -60px;
     padding-top: 60px;
@@ -4730,6 +4736,7 @@ body {
 }
 .cat-info-box {
   margin-bottom: 50px;
+  position: relative;
 }
 .cat-info-box .box-inner-wrap {
   border-radius: 20px;
@@ -5763,6 +5770,12 @@ body {
 }
 .side-menu-box a:hover {
   color: var(--color-att-gray-dark);
+}
+.side-menu-box .active .btn-menu-att {
+  background: var(--clr-att);
+}
+.side-menu-box .active .btn-menu-att.att-second {
+  color: var(--clr-att);
 }
 .side-menu-box .btn-menu {
   padding-left: 18px;
