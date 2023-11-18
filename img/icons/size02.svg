@@ -1,10 +1,25 @@
-<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.3">
-<path d="M19.7168 25.4615V20.5015L28.3553 22.9815L19.7168 25.4615Z" fill="#B1A19D"/>
-<path d="M20.5805 22.981L5.03125 22.981" stroke="#B1A19D" stroke-width="1.4304" stroke-linejoin="round" stroke-dasharray="0.14 2.86"/>
-<path d="M7.72342 7.60498L2.43945 7.60498L5.08144 0.660924L7.72342 7.60498Z" fill="#B1A19D"/>
-<path d="M5.03027 6.44749L5.03027 22.981" stroke="#B1A19D" stroke-width="1.4304" stroke-linejoin="round" stroke-dasharray="0.14 2.86"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 29 28" style="enable-background:new 0 0 29 28;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;}
+	.st1{fill:#9C827B;}
+	.st2{fill:#8A675F;}
+</style>
+<g class="st0">
+	<path class="st1" d="M17.6,23.7L17.6,23.7c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7S18,23.7,17.6,23.7z M14.4,23.7
+		L14.4,23.7c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7S14.8,23.7,14.4,23.7z M11.3,23.7L11.3,23.7
+		c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7S11.7,23.7,11.3,23.7z M8.2,23.7L8.2,23.7c-0.4,0-0.7-0.3-0.7-0.7
+		s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7S8.6,23.7,8.2,23.7z"/>
+	<path class="st1" d="M19.7,25.5v-5l8.6,2.5L19.7,25.5z"/>
 </g>
-<path d="M14.8317 19.0097L8.84277 13.7627L21.8188 7.64118L14.8317 19.0097Z" fill="#8A675F"/>
-<path d="M14.5329 13.887L1.5752 26.2871" stroke="#8A675F" stroke-width="1.4304" stroke-linecap="square" stroke-linejoin="round"/>
+<g class="st0">
+	<path class="st1" d="M7.7,8.2H2.4l2.6-6.9L7.7,8.2z"/>
+	<path class="st1" d="M5,19.8c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7v0C5.7,19.5,5.4,19.8,5,19.8z M5,16.8
+		c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7v0C5.7,16.5,5.4,16.8,5,16.8z M5,13.8c-0.4,0-0.7-0.3-0.7-0.7
+		s0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7v0C5.7,13.5,5.4,13.8,5,13.8z M5,10.8c-0.4,0-0.7-0.3-0.7-0.7S4.6,9.3,5,9.3S5.7,9.6,5.7,10v0
+		C5.7,10.4,5.4,10.8,5,10.8z"/>
+</g>
+<polygon class="st2" points="21.7,8 9.4,13.5 11.5,15.6 0.6,25.1 1.6,26.1 12.5,16.6 14.8,19 "/>
 </svg>

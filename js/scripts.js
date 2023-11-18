@@ -375,6 +375,7 @@ $(document).ready(function () {
 
 	//animate anchor scroll
 	$('.js-anchor-button').on("click", function (e) {
+		$('.popup-menu-wrap .js-btn-popup-toggle').removeClass('active');
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('href')).offset().top
@@ -659,6 +660,17 @@ $(document).ready(function () {
 				$(this).parents('.frm-field').next('.frm-field').find('.form-input').focus();
 			}
 		}
+	})
+	
+	$('.header-panel-wrap .js-btn-popup-toggle').on('click', function() {
+		$('body').removeClass('popup-open');
+		$('body').removeClass('popup-contacts-open');
+		$('.popup-outer-box').removeClass('active');
+		$('.js-popup-open.active').removeClass('active')
+	})
+	$('.header-panel-wrap .js-popup-open').on('click', function() {
+		$('body').removeClass('menu-show');
+		$('.popup-menu-wrap .js-btn-popup-toggle.active').removeClass('active');
 	})
 	
 	
