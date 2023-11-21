@@ -332,7 +332,7 @@
                 <!--order-section-wrap-->
                 <div class="order-section-wrap section-cart section-unsaved js-popup-wrap no-close">
                     <!--order-section-title-->
-                    <div class="order-section-title js-btn-popup-toggle">
+                    <div class="order-section-title js-btn-popup-toggle active">
                         <div class="section-number">1</div>
                         <div class="section-title">Товары и заявки в корзине</div>
                         <div class="section-info">
@@ -684,7 +684,7 @@
                                                 <div class="tile-cart-wrap">
                                                     <div class="tile-price">119.9 ₽</div>
                                                 </div>
-                                                <a href="" class="btn-action-ico ico-cart-main js-btn-tgl"></a>
+                                                <a href="" class="btn-action-ico ico-cart-main cart-plus js-btn-tgl"></a>
                                             </div>
                                         </div>
                                         <!--/item wrap-->
@@ -708,7 +708,7 @@
                                                 <div class="tile-cart-wrap">
                                                     <div class="tile-price">119.9 ₽</div>
                                                 </div>
-                                                <a href="" class="btn-action-ico ico-cart-main js-btn-tgl"></a>
+                                                <a href="" class="btn-action-ico ico-cart-main cart-plus js-btn-tgl"></a>
                                             </div>
                                         </div>
                                         <!--/item wrap-->
@@ -732,7 +732,7 @@
                                                 <div class="tile-cart-wrap">
                                                     <div class="tile-price">119.9 ₽</div>
                                                 </div>
-                                                <a href="" class="btn-action-ico ico-cart-main js-btn-tgl"></a>
+                                                <a href="" class="btn-action-ico ico-cart-main cart-plus js-btn-tgl"></a>
                                             </div>
                                         </div>
                                         <!--/item wrap-->
@@ -854,7 +854,7 @@
                                                 <div class="tile-cart-wrap">
                                                     <div class="tile-price">119.9 ₽</div>
                                                 </div>
-                                                <a href="" class="btn-action-ico ico-cart-main js-btn-tgl"></a>
+                                                <a href="" class="btn-action-ico ico-cart-main cart-plus js-btn-tgl"></a>
                                             </div>
                                         </div>
                                         <!--/item wrap-->
@@ -1344,7 +1344,8 @@
                                     </div>
                                 </div>
 
-                                <div class="frm-section-content">
+                                <!--select02-->
+                                <div class="frm-section-content frm-content" data-content="select02">
                                     <div class="frm-row">
                                         <div class="frm-field">
                                             <div class="field-input">
@@ -1355,24 +1356,24 @@
                                     <div class="frm-row">
                                         <div class="frm-field field-max">
                                             <div class="field-input">
-                                                <input type="text" class="form-input form-input-rows" placeholder="Квартира / Офис №: 2">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Квартира / Офис №:">
                                             </div>
                                         </div>
                                         <div class="frm-field field-min">
                                             <div class="field-input">
-                                                <input type="text" class="form-input form-input-rows" placeholder="Домофон: 2В">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Домофон:">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="frm-row">
                                         <div class="frm-field">
                                             <div class="field-input">
-                                                <textarea class="form-input form-input-rows" placeholder="Подсказка для курьера например, ул. Ленина, 12"></textarea>
+                                                <textarea class="form-input form-input-rows" placeholder="Подсказка для курьера"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="frm-section-wrap form-section-date">
+                                <div class="frm-section-wrap form-section-date frm-content" data-content="select02">
                                     <div class="frm-section-title">
                                         <div class="frm-field-date">
                                             <input type="text" class="form-input form-input-button" placeholder="Выбрать удобную дату доставки" id="date-input">
@@ -1409,11 +1410,73 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--/select02-->
+
+                                <!--select04-->
+                                <div class="frm-section-content frm-content" data-content="select04">
+                                    <div class="frm-row">
+                                        <div class="frm-field field-max">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Город">
+                                            </div>
+                                        </div>
+                                        <div class="frm-field field-min">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Индекс">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-input">
+                                                <textarea class="form-input form-input-rows" placeholder="Адрес доставки:  например, ул. Ленина, 12"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row">
+                                        <div class="frm-field field-max">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Квартира / Офис №:">
+                                            </div>
+                                        </div>
+                                        <div class="frm-field field-min">
+                                            <div class="field-input">
+                                                <input type="text" class="form-input form-input-rows" placeholder="Домофон:">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-input">
+                                                <textarea class="form-input form-input-rows" placeholder="Подсказка для курьера"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-section-wrap form-section-date frm-content" data-content="select04">
+                                    <div class="frm-section-title">
+                                        <div class="frm-field-date">
+                                            <input type="text" class="form-input form-input-button" placeholder="Выбрать удобную дату доставки" id="date-input-second">
+                                        </div>
+                                    </div>
+                                    <div class="frm-section-content">
+                                        <div class="frm-section-info">Стоимость доставки будет уточнена</div>
+                                    </div>
+                                </div>
+                                <!--/select04-->
                             </div>
                             <!--/delivery-form-box-->
                             <div class="frm-row-submit">
                                 <div class="frm-field">
                                     <a href="" class="btn">Сохранить и продолжить</a>
+                                </div>
+                                <div class="frm-field-link frm-content" data-content="select05">
+                                    <a href="" class="link-button">
+                                        <span class="button-ico">
+                                            <img src="./img/icons/arrow-down-button.svg" alt="">
+                                        </span>
+                                        <span class="button-title">Схема проезда</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

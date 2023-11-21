@@ -182,6 +182,12 @@ html {
     }
     .phone-wrap {
         margin-bottom: 10px;
+        .link-arrow {
+            border-bottom: 1px solid #F5E2D9;
+            &:before {
+                margin-top: -11px;
+            }
+        }
     }
     .info-wrap {
         margin-bottom: 40px;
@@ -799,12 +805,22 @@ html {
     }
 }
 @media (min-width: 1024px) {
+    .popup-contacts-open {
+        .header-outer-wrap, .header {
+            z-index: inherit;
+        }
+    }
     .wrap-hidden {
         overflow: hidden;
     }
     .wrap-side-menu {
         .page-full {
             max-width: 1660px;
+        }
+        .content-outer-wrap {
+            .content-wrap {
+                max-width: 1030px;
+            }
         }
     }
     .wrap-main {
@@ -830,6 +846,14 @@ html {
             background: #FAFAFC;
             height: 34px;
             z-index: 2;
+        }
+        .phone-wrap {
+            .link-arrow {
+                border-bottom-width: 2px;
+                &:before {
+                    margin-top: -14px;
+                }
+            }
         }
     }
     .footer-bottom-panel {
@@ -897,10 +921,7 @@ html {
     .content-outer-wrap {
         flex-wrap: wrap;
         display: flex;
-        //margin-left: calc(var(--paddingContainer) * -1);
-        //margin-right: calc(var(--paddingContainer) * -1);
-        //padding-left: 24px;
-        //padding-right: 24px;
+        align-items: flex-start;
         padding-top: 8rem;
         padding-bottom: 8rem;
         .content-full-wrap {
@@ -1245,9 +1266,6 @@ html {
 }*/
 @media (min-width: 1700px) {
     .popup-contacts-open {
-        .header-outer-wrap, .header {
-            z-index: inherit;
-        }
         .header {
             .actions-inner-wrap .action-cart .button-header {
                 z-index: 1200;

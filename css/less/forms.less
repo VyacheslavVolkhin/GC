@@ -485,6 +485,11 @@ body {
         .form-input {
             padding-left: 0;
         }
+        .field-input-content {
+            &:before {
+                display: none;
+            }
+        }
         &:before {
             display: block;
         }
@@ -819,12 +824,25 @@ body {
     line-height: 20px;
     overflow: visible;
     &:hover {
-        z-index: 5;
+        z-index: 16;
     }
     input:checked~label {
-        z-index: 3;
+        z-index: 12;
         &:before {
             opacity: 1;
+            top: -10px;
+            bottom: -10px;
+            left: -14px;
+            right: -14px;
+        }
+        .elm-photo {
+            z-index: 14;
+            img {
+                transform: scale(1.2)
+            }
+        }
+        .lbl-title {
+            display: none !important;
         }
     }
     label {
@@ -835,12 +853,17 @@ body {
         .elm-photo {
             height: 31px;
             aspect-ratio: inherit;
+            overflow: visible;
             position: relative;
             z-index: 3;
         }
         &:hover {
             &:before {
                 opacity: 1;
+                top: -10px;
+                bottom: -10px;
+                left: -14px;
+                right: -14px;
             }
         }
         &:before {
@@ -860,6 +883,17 @@ body {
     }
     .lbl-title {
         display: none;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1;
+        color: var(--clr-att);
+        z-index: 12;
+        font-style: italic;
+        font-weight: 400;
     }
 }
 .frm-select-panel {

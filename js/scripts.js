@@ -1,5 +1,6 @@
 //datepicker
 new AirDatepicker('#date-input');
+new AirDatepicker('#date-input-second');
 
 
 
@@ -236,15 +237,16 @@ $(document).ready(function () {
 		let stickyTop = $('.js-side-menu').offset().top - 30;
 		$(window).scroll(function () {
 			let windowTop = $(window).scrollTop();
-			let sideBottomMax = $(window).outerHeight() + windowTop - $('.js-side-menu-bottom').position().top + 120;
-			let sideBottom = windowTop + $(window).outerHeight() - $('.js-side-menu-bottom').position().top - 60
+			let sideBottomMax = $('.js-side-menu-bottom').position().top  - windowTop
+			let sideBottom = windowTop + $(window).outerHeight() - $('.js-side-menu-bottom').position().top 
+			console.log(sideBottomMax)
 			$('.js-side-menu').css('bottom', sideBottom)
 			if (stickyTop < windowTop) {
 				$('.wrap').addClass('side-menu-fixed');
 			} else {
 				$('.wrap').removeClass('side-menu-fixed');
 			}
-			if ($('.js-side-menu').outerHeight() < sideBottomMax) {
+			if ($('.js-side-menu').outerHeight() > sideBottomMax) {
 				$('.wrap').addClass('side-menu-fixed-bottom');
 			}  else {
 				$('.wrap').removeClass('side-menu-fixed-bottom');
