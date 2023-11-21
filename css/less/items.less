@@ -607,6 +607,20 @@
     &.tile-four {
         background-color: #F9D1D1;
     }
+    &.tile-five {
+        background: linear-gradient(210deg, #F5E0D9 10.3%, #F9DF7C 82.73%, #FFDE00 141.09%);
+    }
+    &.tile-six {
+        background: #FFDE00;
+        .tile-photo {
+            img, svg {
+                width: 80%;
+            }
+        }
+        .tile-text {
+            display: none;
+        }
+    }
     .tile-stickers-wrap {
         display: block;
         flex: 1;
@@ -1347,6 +1361,15 @@
             }
         }
     }
+    .item-tile-main {
+        .tile-actions-wrap {
+            .btn.button-border {
+                &:not(:hover) {
+                    background-color: #FFFAF9;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 639px) {
     .item-tile-top {
@@ -1362,6 +1385,60 @@
     .item-tile-review {
         .tile-content-wrap {
             min-height: 0;
+        }
+    }
+    .item-tile-main {
+        &.tile-six {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 25px 25px;
+            border-radius: 15px;
+            min-height: 0;
+            height: auto;
+            .tile-photo-wrap {
+                order: 1;
+                width: 65px;
+                flex: inherit;
+                flex-shrink: 0;
+                margin: 0;
+                padding: 0;
+            }
+            .tile-title-wrap {
+                flex: 1;
+                padding: 0 20px 0 10px;
+                margin: 0;
+                order: 2;
+            }
+            .tile-actions-wrap {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                .btn {
+                    display: none;
+                }
+            }
+            .tile-text {
+                display: block;
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--clr-att);
+                letter-spacing: -0.14px;
+            }
+            .tile-title {
+                font-style: normal;
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+            .tile-photo {
+                img, svg {
+                    width: auto;
+                }
+            }
         }
     }
 }
