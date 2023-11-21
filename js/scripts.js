@@ -649,7 +649,14 @@ $(document).ready(function () {
 	//more wrap
 	$('.more-wrap .btn').on('click', function() {
 		if ($(this).find('[data-show]').length > 0) {
-			$(this).parent('.more-wrap').prev('.items-wrap').toggleClass('show-all');
+			if ($(this).parent('.more-wrap').prev('.items-wrap').length>0) {
+				$(this).parent('.more-wrap').prev('.items-wrap').toggleClass('show-all');
+			} else {
+				if ($(this).parent('.more-wrap').parents('.page-full').find('.portfolio-box').length>0) {
+					$(this).parent('.more-wrap').parents('.page-full').find('.portfolio-box').find('.items-wrap').toggleClass('show-all');
+					$(this).parent('.more-wrap').toggleClass('show-all');
+				}
+			}
 			return false;
 		}
 	})

@@ -1,6 +1,36 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.page-nav-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    .more-wrap {
+        width: 100%;
+        order: 1;
+        margin-bottom: 40px;
+        .btn {
+            width: 100%;
+        }
+    }
+    .action-wrap {
+        width: 50%;
+        padding: 0 10px 0 0;
+        order: 2;
+        &~.action-wrap {
+            padding: 0 0 0 10px;
+            order: 3;
+        }
+    }
+    .link-arrow {
+        width: 100%;
+        text-align: right;
+        &.arrow-prev {
+            text-align: left;
+        }
+    }
+}
 .card-info-box {
     border-radius: 30px;
     position: relative;
@@ -1668,6 +1698,13 @@
 }
 .portfolio-box {
     margin-bottom: 10px;
+    &.opened {
+        margin-bottom: 0;
+        .popup-content-block {
+            padding-bottom: 0;
+            display: block;
+        }
+    }
     .tiles-main-photos-box {
         margin-bottom: 0;
     }
@@ -1728,7 +1765,8 @@
 }
 .tiles-reviews-box,
 .tiles-products-box,
-.tiles-main-photos-box {
+.tiles-main-photos-box,
+.page-nav-box {
     .more-wrap {
         .btn {
             width: 100%;
@@ -3272,7 +3310,8 @@ body.popup-open {
         }
     }
 }
-.show-all+.more-wrap .btn [data-show]:before {
+.show-all+.more-wrap .btn [data-show]:before,
+.show-all.more-wrap .btn [data-show]:before {
     content: attr(data-hide);
 }
 @media (max-width: 1899px) {
@@ -4256,6 +4295,7 @@ body.popup-open {
     }
 }
 @media (min-width: 1024px) {
+    
     .card-info-box {
         font-size: (19/8.5rem);
         line-height: (25/19);
@@ -5134,6 +5174,11 @@ body.popup-open {
     }
     .portfolio-box {
         margin-bottom: 18px;
+        &.opened {
+            .action-title-box {
+                margin-bottom: 0;
+            }
+        }
         &.js-tab-block {
             display: block;
         }
@@ -5159,7 +5204,7 @@ body.popup-open {
             display: none;
         }
     }
-    .tiles-products-box, .tiles-main-photos-box, .tiles-reviews-box {
+    .tiles-products-box, .tiles-main-photos-box, .tiles-reviews-box, .page-nav-box {
         .more-wrap {
             text-align: right;
             margin: 16px 0 0 -8px;
@@ -5172,6 +5217,44 @@ body.popup-open {
                 padding: 0 29px;
                 letter-spacing: -0.188px;
             }
+        }
+    }
+    .page-nav-box {
+        max-width: 1540px;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 0;
+        margin-bottom: 5rem;
+        .action-wrap {
+            order: 1;
+            padding: 0 2rem 0 0;
+            flex-shrink: 0;
+            &:first-child {
+                width: calc(32% + 6.9rem);
+                padding-left: 55px;
+            }
+            &~.action-wrap {
+                order: 3;
+                padding: 0 0 0 8px;
+                width: 31%;
+            }
+        }
+        .more-wrap {
+            width: auto;
+            flex: 1;
+            order: 2;
+            margin: 0;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            .btn {
+                min-width: inherit;
+                width: 100%;
+            }
+        }
+        .link-arrow {
+            //font-size: 16px;
+            //letter-spacing: 7.04px;
         }
     }
     .tiles-reviews-box {
@@ -6410,6 +6493,13 @@ body.popup-open {
     }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
+    .page-nav-box {
+        .action-wrap {
+            &:first-child {
+                padding-left: 40px;
+            }
+        }
+    }
     .history-box {
         .title-inner-wrap {
             padding-right: 120px;

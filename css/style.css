@@ -151,6 +151,15 @@ a.link-main,
   color: var(--clr-att);
   opacity: 0.5;
 }
+.link-arrow.arrow-prev {
+  padding-right: 0;
+  padding-left: 20px;
+}
+.link-arrow.arrow-prev:before {
+  transform: scaleX(-1);
+  right: auto;
+  left: -3px;
+}
 .link-arrow:before {
   content: "";
   display: block;
@@ -161,7 +170,7 @@ a.link-main,
   background-size: 100% auto;
   top: 100%;
   right: -3px;
-  margin-top: -13px;
+  margin-top: -12px;
 }
 .link-phone {
   white-space: nowrap;
@@ -340,6 +349,10 @@ h1 {
     width: 42px;
     height: 31px;
     margin-top: -16px;
+  }
+  .link-arrow.arrow-prev {
+    padding-left: 40px;
+    padding-right: 0;
   }
   .h1-title,
   h1 {
@@ -4147,6 +4160,41 @@ body {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.page-nav-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+.page-nav-box .more-wrap {
+  width: 100%;
+  -ms-flex-order: 1;
+      order: 1;
+  margin-bottom: 40px;
+}
+.page-nav-box .more-wrap .btn {
+  width: 100%;
+}
+.page-nav-box .action-wrap {
+  width: 50%;
+  padding: 0 10px 0 0;
+  -ms-flex-order: 2;
+      order: 2;
+}
+.page-nav-box .action-wrap ~ .action-wrap {
+  padding: 0 0 0 10px;
+  -ms-flex-order: 3;
+      order: 3;
+}
+.page-nav-box .link-arrow {
+  width: 100%;
+  text-align: right;
+}
+.page-nav-box .link-arrow.arrow-prev {
+  text-align: left;
+}
 .card-info-box {
   border-radius: 30px;
   position: relative;
@@ -5796,6 +5844,13 @@ body {
 .portfolio-box {
   margin-bottom: 10px;
 }
+.portfolio-box.opened {
+  margin-bottom: 0;
+}
+.portfolio-box.opened .popup-content-block {
+  padding-bottom: 0;
+  display: block;
+}
 .portfolio-box .tiles-main-photos-box {
   margin-bottom: 0;
 }
@@ -5856,7 +5911,8 @@ body {
 }
 .tiles-reviews-box .more-wrap .btn,
 .tiles-products-box .more-wrap .btn,
-.tiles-main-photos-box .more-wrap .btn {
+.tiles-main-photos-box .more-wrap .btn,
+.page-nav-box .more-wrap .btn {
   width: 100%;
   height: 45px;
   border-radius: 50px;
@@ -7464,7 +7520,8 @@ body.popup-open {
 .more-wrap .btn [data-show]:before {
   content: attr(data-show);
 }
-.show-all + .more-wrap .btn [data-show]:before {
+.show-all + .more-wrap .btn [data-show]:before,
+.show-all.more-wrap .btn [data-show]:before {
   content: attr(data-hide);
 }
 @media (max-width: 1899px) {
@@ -9321,6 +9378,9 @@ body.popup-open {
   .portfolio-box {
     margin-bottom: 18px;
   }
+  .portfolio-box.opened .action-title-box {
+    margin-bottom: 0;
+  }
   .portfolio-box.js-tab-block {
     display: block;
   }
@@ -9347,20 +9407,64 @@ body.popup-open {
   }
   .tiles-products-box .more-wrap,
   .tiles-main-photos-box .more-wrap,
-  .tiles-reviews-box .more-wrap {
+  .tiles-reviews-box .more-wrap,
+  .page-nav-box .more-wrap {
     text-align: right;
     margin: 16px 0 0 -8px;
     padding-top: 0;
   }
   .tiles-products-box .more-wrap .btn,
   .tiles-main-photos-box .more-wrap .btn,
-  .tiles-reviews-box .more-wrap .btn {
+  .tiles-reviews-box .more-wrap .btn,
+  .page-nav-box .more-wrap .btn {
     min-width: calc(50% - 8px);
     width: auto;
     height: 60px;
     font-size: 18px;
     padding: 0 29px;
     letter-spacing: -0.188px;
+  }
+  .page-nav-box {
+    max-width: 1540px;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+  .page-nav-box .action-wrap {
+    -ms-flex-order: 1;
+        order: 1;
+    padding: 0 2rem 0 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .page-nav-box .action-wrap:first-child {
+    width: calc(32% + 6.9rem);
+    padding-left: 55px;
+  }
+  .page-nav-box .action-wrap ~ .action-wrap {
+    -ms-flex-order: 3;
+        order: 3;
+    padding: 0 0 0 8px;
+    width: 31%;
+  }
+  .page-nav-box .more-wrap {
+    width: auto;
+    -ms-flex: 1;
+        flex: 1;
+    -ms-flex-order: 2;
+        order: 2;
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .page-nav-box .more-wrap .btn {
+    min-width: inherit;
+    width: 100%;
   }
   .tiles-reviews-box .items-wrap {
     margin: 0 -8px -16px -8px;
@@ -10599,6 +10703,9 @@ body.popup-open {
   }
 }
 @media (min-width: 1024px) and (max-width: 1399px) {
+  .page-nav-box .action-wrap:first-child {
+    padding-left: 40px;
+  }
   .history-box .title-inner-wrap {
     padding-right: 120px;
     font-size: 19px;

@@ -137,6 +137,15 @@ a.link-main, .link-main {
         color: var(--clr-att);
         opacity: 0.5;
     }
+    &.arrow-prev {
+        padding-right: 0;
+        padding-left: 20px;
+        &:before {
+            transform: scaleX(-1);
+            right: auto;
+            left: -3px;
+        }
+    }
     &:before {
         content: "";
         display: block;
@@ -147,7 +156,7 @@ a.link-main, .link-main {
         background-size: 100% auto;
         top: 100%;
         right: -3px;
-        margin-top: -13px;
+        margin-top: -12px;
     }
 }
 .link-phone {
@@ -294,6 +303,10 @@ h6, .h6-title {
             width: 42px;
             height: 31px;
             margin-top: -16px;
+        }
+        &.arrow-prev {
+            padding-left: 40px;
+            padding-right: 0;
         }
     }
     .h1-title, h1 {
