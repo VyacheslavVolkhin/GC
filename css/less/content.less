@@ -1,6 +1,243 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.portfolio-slider-box {
+    margin-bottom: 65px;
+    .slider-info-wrap {
+        background: #fff;
+        border-radius: 0 0 30px 30px;
+        padding: 110px 30px 0 30px;
+        margin-top: -50px;
+    }
+    .slider-wrap {
+        position: relative;
+        z-index: 2;
+        .slick-list {
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slick-dots {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding: 15px 0 0 0;
+        }
+        .elm-photo {
+            aspect-ratio: 340/478;
+        }
+        .ico-arrow {
+            position: absolute;
+            top: calc(100% + 60px);
+            margin-top: -20px;
+            left: 5rem;
+        }
+        .ico-arrow-next {
+            left: auto;
+            right: 5rem;
+        }
+    }
+    .slider-preview-wrap {
+        display: none;
+        padding: 54px 10rem 20px 10rem;
+        margin-top: -34px;
+        background: #fff;
+        .slider {
+            display: flex;
+            margin: 0 -8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: -16px;
+        }
+        .sl-wrap {
+            padding: 0 8px;
+            width: 94px;
+            flex-shrink: 0;
+            margin-bottom: 16px;
+            &~.sl-wrap {
+                display: block;
+            }
+            &.active {
+                .elm-photo {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .elm-photo {
+            aspect-ratio: 1;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border: 2px solid var(--clr-att);
+                opacity: 0;
+                border-radius: 15px;
+                transition: opacity ease 0.2s;
+                box-shadow: 0px 15px 15px 0px rgba(163, 108, 68, 0.04);
+                z-index: 5;
+            }
+        }
+    }
+    .features-inner-wrap {
+        margin-bottom: 55px;
+    }
+    .action-inner-wrap {
+        margin: 0 -30px;
+        .btn {
+            width: 100%;
+        }
+    }
+    .ext-info-wrap {
+        margin-bottom: 35px;
+        .feature-row {
+            margin-bottom: 26px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--clr-border);
+            color: #545454;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: -0.14px;
+            &.row-head {
+                border-bottom: 2px solid #756B6B;
+                padding-bottom: 0;
+                font-size: 18px;
+                line-height: 20px;
+                color: #545454;
+                letter-spacing: -0.18px;
+                margin-bottom: 25px;
+                .row-title {
+                    width: 100%;
+                    max-width: 100%;
+                    padding-right: 0;
+                }
+            }
+            &:before {
+                display: none;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .row-value {
+                min-width: 0;
+                width: auto;
+            }
+            .row-title {
+                font-style: normal;
+            }
+            .elm-price {
+                display: inline;
+            }
+        }
+    }
+    .stickers-inner-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px 50px 0;
+    }
+    .feature-row {
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 9px;
+        margin-left: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px dotted #E4E3E3;
+        }
+        .row-title {
+            display: block;
+            flex-shrink: 0;
+            max-width: 50%;
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            font-style: italic;
+        }
+        .row-value {
+            display: block;
+            width: 50%;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+            background-color: #fff;
+        }
+        .elm-sticker {
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 13px;
+            padding: 0 12px;
+            font-size: 14px;
+            margin: -2px 0 -2px -12px;
+        }
+    }
+    .h1-title {
+        margin-bottom: 1.5em;
+    }
+    .elm-sticker {
+        flex-shrink: 0;
+        margin: 0 10px 10px 0;
+    }
+}
+@media (min-width: 768px) {
+    .portfolio-slider-box {
+        .slider-info-wrap {
+            border-radius: 0 0 34px 34px;
+            padding-bottom: 30px;
+            display: flex;
+        }
+        .main-info-inner-wrap {
+            width: 50%;
+            padding: 0 15px 0 0;
+            margin: 0;
+        }
+        .info-inner-wrap {
+            width: 50%;
+            padding: 0 0 0 15px;
+            margin: 0;
+        }
+        .action-inner-wrap {
+            margin: 0;
+        }
+        .slider-preview-wrap {
+            display: block;
+        }
+        .features-inner-wrap {
+            margin-bottom: 0;
+        }
+        .slider-wrap {
+            .slick-list {
+                border-radius: 34px;
+            }
+            .elm-photo {
+                aspect-ratio: 1720/900;
+            }
+        }
+    }
+}
 .page-nav-box {
     display: flex;
     flex-wrap: wrap;
@@ -4295,7 +4532,71 @@ body.popup-open {
     }
 }
 @media (min-width: 1024px) {
-    
+    .portfolio-slider-box {
+        margin-bottom: 10rem;
+        .stickers-inner-wrap {
+            margin: 0 -8px 50px 0;
+        }
+        .ext-info-wrap {
+            margin-bottom: 20px;
+            .feature-row {
+                font-size: 1em;
+                line-height: inherit;
+                padding-bottom: 15px;
+                margin-bottom: 16px;
+                max-width: 100%;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &.row-head {
+                    padding-bottom: 15px;
+                    border-bottom-width: 2px;
+                    font-size: 20px;
+                }
+            }
+        }
+        .slider-info-wrap {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-bottom: 7rem;
+            padding-top: 100px;
+            font-size: 19px;
+            line-height: (25/19);
+            letter-spacing: -0.196px;
+        }
+        .feature-row {
+            font-size: 1em;
+            line-height: inherit;
+            max-width: 500px;
+            margin-bottom: 28px;
+            .row-value {
+                width: 60%;
+            }
+            .elm-sticker {
+                height: 29px;
+                border-radius: 15px;
+                padding: 0 12px;
+                font-size: 18px;
+                line-height: 29px;
+            }
+        }
+        .action-inner-wrap {
+            .btn {
+                font-size: 23px;
+            }
+        }
+        .slider-wrap {
+            .ico-arrow {
+                margin-top: -30px;
+            }
+        }
+        .h1-title {
+            max-width: (509/46em);
+        }
+        .elm-sticker {
+            margin: 0 8px 8px 0;
+        }
+    }
     .card-info-box {
         font-size: (19/8.5rem);
         line-height: (25/19);
