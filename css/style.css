@@ -5350,6 +5350,7 @@ body {
   -ms-flex-pack: end;
       justify-content: flex-end;
   margin: -100px -170px -155px 0;
+  pointer-events: none;
 }
 .cat-info-box .info-inner-wrap {
   position: relative;
@@ -5740,6 +5741,12 @@ body {
 }
 .history-box {
   margin-bottom: 10px;
+}
+.history-box.active .action-wrap .btn.button-border.button-border-second {
+  background-color: #FFDE00;
+}
+.history-box.active .action-wrap .btn.button-border.button-border-second:hover {
+  background-color: var(--clr-att-hover);
 }
 .history-box.active .btn-action-ico.button-toggle:before {
   transform: rotate(180deg);
@@ -6418,6 +6425,7 @@ body {
   padding-right: 8px;
   display: inline-block;
   vertical-align: middle;
+  margin-right: -13px;
   background: linear-gradient(269deg, #FFDE00 -216.13%, #FEE186 -39.49%, #FEE3DC 162.54%);
 }
 .side-menu-box .btn-menu-att[data-count]:after {
@@ -6445,7 +6453,7 @@ body {
   padding: 0 12px;
 }
 .side-menu-box .button-title[data-count]:after {
-  margin-right: -12px;
+  margin-right: -13px;
 }
 .side-menu-box .active {
   color: #F5E2D9;
@@ -9817,8 +9825,8 @@ body.popup-open {
   }
   .page-nav-box {
     max-width: 1540px;
-    -ms-flex-align: center;
-        align-items: center;
+    -ms-flex-align: start;
+        align-items: flex-start;
     -ms-flex-direction: row;
         flex-direction: row;
     -ms-flex-wrap: nowrap;
@@ -9832,6 +9840,17 @@ body.popup-open {
     padding: 0 2rem 0 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    position: relative;
+  }
+  .page-nav-box .action-wrap:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 70px;
+    position: absolute;
+    right: 2rem;
+    bottom: -34px;
+    background: var(--clr-att);
   }
   .page-nav-box .action-wrap:first-child {
     width: calc(32% + 6.9rem);
@@ -9843,6 +9862,10 @@ body.popup-open {
     padding: 0 0 0 8px;
     width: 31%;
   }
+  .page-nav-box .action-wrap ~ .action-wrap:after {
+    right: auto;
+    left: 8px;
+  }
   .page-nav-box .more-wrap {
     width: auto;
     -ms-flex: 1;
@@ -9850,7 +9873,8 @@ body.popup-open {
     -ms-flex-order: 2;
         order: 2;
     margin: 0;
-    padding-left: 2rem;
+    padding-top: 10px;
+    padding-left: 1rem;
     padding-right: 2rem;
   }
   .page-nav-box .more-wrap .btn {
@@ -9980,6 +10004,13 @@ body.popup-open {
   }
   .side-menu-box a {
     padding: 9px 30px 9px 9.5rem;
+    line-height: 19px;
+  }
+  .side-menu-box .button-title {
+    line-height: 19px;
+    min-height: 26px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
   .side-menu-box .btn-menu {
     padding-left: 1rem;
@@ -9992,9 +10023,15 @@ body.popup-open {
   }
   .side-menu-box .btn-menu-att {
     padding: 0 12px;
-    height: 3.06rem;
-    line-height: 3.06rem;
+    height: 26px;
+    line-height: 26px;
     border-radius: 13px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
+  .side-menu-box .btn-menu-att[data-count]:after {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .side-menu-box .button-ico {
     width: 5rem;
@@ -10004,10 +10041,13 @@ body.popup-open {
     margin-left: 15px;
   }
   .side-menu-box [data-count]:after {
-    height: 3.06rem;
+    height: 26px;
+    line-height: 26px;
     border-radius: 13px;
     font-size: 15px;
     margin-left: 8px;
+    margin-top: -3px;
+    margin-bottom: -3px;
   }
   .popup-select-box {
     display: -ms-flexbox;
@@ -11752,6 +11792,7 @@ select.form-input:required:invalid {
 .btn-action-ico.ico-cart-main:hover,
 .btn-action-ico.ico-cart-main.active {
   background-color: #FAEDEA;
+  box-shadow: -8.54167px 17.08333px 21.35417px 0px rgba(156, 48, 14, 0.08);
 }
 .btn-action-ico.ico-cart-main.cart-plus:before {
   background-image: url(../img/icons/cart-plus.svg);
@@ -13286,6 +13327,9 @@ body .air-datepicker-global-container .air-datepicker--content .air-datepicker-b
 }
 .frm-select-check.color-third label:before {
   background: linear-gradient(to top, rgba(251, 225, 216, 0.8) 0%, rgba(255, 227, 142, 0.8) 50%, rgba(255, 222, 0, 0.8) 100%);
+}
+.frm-select-check.color-light label:before {
+  background: #FCF9F9;
 }
 .frm-select-check.select-small {
   font-size: 12px;

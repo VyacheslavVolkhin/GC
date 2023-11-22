@@ -1101,6 +1101,7 @@
         display: flex;
         justify-content: flex-end;
         margin: -100px -170px -155px 0;
+        pointer-events: none;
     }
     .info-inner-wrap {
         position: relative;
@@ -1497,6 +1498,14 @@
 .history-box {
     margin-bottom: 10px;
     &.active {
+        .action-wrap {
+            .btn.button-border.button-border-second {
+                background-color:#FFDE00;
+                &:hover {
+                    background-color:var(--clr-att-hover);
+                }
+            }
+        }
         .btn-action-ico.button-toggle {
             &:before {
                 .t-rotate(180deg);
@@ -2196,6 +2205,7 @@
         padding-right: 8px;
         display: inline-block;
         vertical-align: middle;
+        margin-right: -13px;
         background: linear-gradient(269deg, #FFDE00 -216.13%, #FEE186 -39.49%, #FEE3DC 162.54%);
         &[data-count]:after {
             margin-right: -8px;
@@ -2221,7 +2231,7 @@
         z-index: 2;
         padding: 0 12px;
         &[data-count]:after {
-            margin-right: -12px;
+            margin-right: -13px;
         }
     }
     .active {
@@ -5522,7 +5532,7 @@ body.popup-open {
     }
     .page-nav-box {
         max-width: 1540px;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: row;
         flex-wrap: nowrap;
         margin-top: 0;
@@ -5531,6 +5541,17 @@ body.popup-open {
             order: 1;
             padding: 0 2rem 0 0;
             flex-shrink: 0;
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 70px;
+                position: absolute;
+                right: 2rem;
+                bottom: -34px;
+                background: var(--clr-att);
+            }
             &:first-child {
                 width: calc(32% + 6.9rem);
                 padding-left: 55px;
@@ -5539,6 +5560,10 @@ body.popup-open {
                 order: 3;
                 padding: 0 0 0 8px;
                 width: 31%;
+                &:after {
+                    right: auto;
+                    left: 8px;
+                }
             }
         }
         .more-wrap {
@@ -5546,7 +5571,8 @@ body.popup-open {
             flex: 1;
             order: 2;
             margin: 0;
-            padding-left: 2rem;
+            padding-top: 10px;
+            padding-left: 1rem;
             padding-right: 2rem;
             .btn {
                 min-width: inherit;
@@ -5705,6 +5731,13 @@ body.popup-open {
         }
         a {
             padding: 9px 30px 9px 9.5rem;
+            line-height: 19px;
+        }
+        .button-title {
+            line-height: 19px;
+            min-height: 26px;
+            padding-top: 3px;
+            padding-bottom: 3px;
         }
         .btn-menu {
             padding-left: 1rem;
@@ -5717,9 +5750,15 @@ body.popup-open {
         }
         .btn-menu-att {
             padding: 0 12px;
-            height: 3.06rem;
-            line-height: 3.06rem;
+            height: 26px;
+            line-height: 26px;
             border-radius: 13px;
+            margin-top: -3px;
+            margin-bottom: -3px;
+            &[data-count]:after {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
         .button-ico {
             width: 5rem;
@@ -5730,10 +5769,13 @@ body.popup-open {
         }
         [data-count] {
             &:after {
-                height: 3.06rem;
+                height: 26px;
+                line-height: 26px;
                 border-radius: 13px;
                 font-size: 15px;
                 margin-left: 8px;
+                margin-top: -3px;
+                margin-bottom: -3px;
             }
         }
     }
