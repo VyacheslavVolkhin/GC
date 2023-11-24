@@ -568,7 +568,7 @@ body {
   margin-bottom: 10px;
 }
 .footer-main-panel .phone-wrap .link-arrow {
-  border-bottom: 1px solidvar(--color-att-pink-medium);
+  border-bottom: 1px solid var(--color-att-pink-medium);
 }
 .footer-main-panel .phone-wrap .link-arrow:before {
   margin-top: -11px;
@@ -3189,7 +3189,7 @@ body {
 }
 .tile-scale-wrap .scale-title.scale-title-att,
 .elm-scale-wrap .scale-title.scale-title-att {
-  border: 1px solidvar(--color-att-yellow);
+  border: 1px solid var(--color-att-yellow);
   padding: 0 0.5em;
   font-size: 1.1em;
 }
@@ -5218,7 +5218,7 @@ body {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-top: 1px solidvar(--clr-border);
+  border-top: 1px solid var(--clr-border);
   margin-top: 28px;
   padding-top: 10px;
 }
@@ -12141,7 +12141,7 @@ body .air-datepicker-global-container .air-datepicker-nav--action svg {
 body .air-datepicker-global-container .air-datepicker {
   width: 29.85em;
   background: #FFFAF9;
-  border: 1px solidvar(--clr-att);
+  border: 1px solid var(--clr-att);
   box-shadow: 0px 35.42637634px 35.42637634px rgba(161, 95, 47, 0.05);
   border-radius: 30px;
   padding: 2em 2em 2em 2em;
@@ -12238,7 +12238,7 @@ body .air-datepicker-global-container .air-datepicker--content .air-datepicker-b
   width: 2.3em;
   height: 2.3em;
   border-radius: 50%;
-  border: 1px solidvar(--clr-att);
+  border: 1px solid var(--clr-att);
   background: var(--clr-bg-light);
   z-index: -1;
   margin: -1.15em 0px 0 -1.15em;
@@ -13135,7 +13135,7 @@ body .air-datepicker-global-container .air-datepicker--content .air-datepicker-b
   font-style: italic;
   color: var(--clr-base);
   border-radius: 30px;
-  border: 1px solidvar(--clr-border);
+  border: 1px solid var(--clr-border);
   transition: all ease 0.2s;
 }
 .frm-select-panel label:before {
