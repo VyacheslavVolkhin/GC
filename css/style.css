@@ -6709,7 +6709,7 @@ body {
   line-height: 18px;
   letter-spacing: -0.14px;
   background: #FAEDEA;
-  padding: 27px 85px 20px 30px;
+  padding: 27px 110px 20px 30px;
   border-radius: 20px;
   position: relative;
 }
@@ -10195,9 +10195,6 @@ body.popup-open {
   .popup-select-box .slider-wrap {
     margin-bottom: 3.5rem;
   }
-  .popup-select-box .slider-wrap.type-second {
-    margin-bottom: -3rem;
-  }
   .popup-select-box .select-photos-wrap {
     width: 46%;
     -ms-flex-negative: 0;
@@ -10248,9 +10245,12 @@ body.popup-open {
     border-width: 2rem 3rem;
     margin-left: -3rem;
   }
+  .popup-select-box .slider-info-wrap.type-second {
+    padding-right: 140px;
+  }
   .popup-select-box .slider-info-wrap.type-second .elm-ico {
     margin-bottom: -26rem;
-    margin-left: -29rem;
+    margin-left: -24rem;
   }
   .popup-select-box .slider-info-period {
     padding-left: 35px;
