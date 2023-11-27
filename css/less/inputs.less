@@ -223,6 +223,11 @@ select.form-input:required:invalid {
         &:not(:hover) {
             background-color: #FFFAF9;
         }
+        &:hover {
+            background-color: #fff;
+            color: var(--clr-att);
+            border-color: var(--clr-att);
+        }
     }
     &.button-border {
         &.button-border-second {
@@ -694,6 +699,11 @@ select.form-input:required:invalid {
                 background-size: 50px 50px, 34px auto;
                 background-repeat: repeat, no-repeat;
             }
+        }
+    }
+    textarea.form-input {
+        &.form-input-rows {
+            background-size: 50px 60px;
         }
     }
     .btn {

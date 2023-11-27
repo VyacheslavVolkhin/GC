@@ -665,6 +665,25 @@ body {
     position: relative;
     padding: 0 18px;
     width: 100%;
+    &:hover {
+        .field-counter-button {
+            border-color: #433D3C;
+            &:before, &:after {
+                filter: brightness(0) grayscale(1);
+            }
+            &:hover {
+                &:before, &:after {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+        .form-input {
+            color: #433D3C;
+        }
+        &:before {
+            border-color: #433D3C;
+        }
+    }
     &:before {
         content: "";
         display: block;
@@ -675,6 +694,7 @@ body {
         height: 5px;
         border: 1px solid var(--clr-att);
         border-top: none;
+        transition: all ease 0.2s;
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -1474,6 +1494,15 @@ body {
 }
 @media (max-width: 1023px) {
 
+    .frm-field-input {
+        &:after {
+            width: 1px;
+            margin-top: -2px;
+        }
+        .field-input-content {
+            border-bottom-width: 1px;
+        }
+    }
     body {
         .air-datepicker-global-container {
             font-size: 10px;

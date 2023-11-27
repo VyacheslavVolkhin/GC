@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="33c1e436-f245-4d66-b94e-65d1b59486dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_html/cat.html" beforeDir="false" afterPath="$PROJECT_DIR$/_html/cat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cat.html" beforeDir="false" afterPath="$PROJECT_DIR$/cat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/content.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/content.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/forms.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/forms.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/less/inputs.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/inputs.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/items.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/items.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/less/structura.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/less/structura.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
@@ -119,7 +122,8 @@
       <workItem from="1700044346468" duration="29859000" />
       <workItem from="1700482063022" duration="5147000" />
       <workItem from="1700533131144" duration="21846000" />
-      <workItem from="1700832983203" duration="192000" />
+      <workItem from="1700832983203" duration="836000" />
+      <workItem from="1701101220429" duration="4115000" />
     </task>
     <servers />
   </component>

@@ -117,7 +117,7 @@
         letter-spacing: -0.752px;
         line-height: 44px;
         display: block;
-        font-weight: 400;
+        font-weight: 300;
         padding-top: 8px;
         margin-bottom: 20px;
     }
@@ -125,8 +125,8 @@
         flex-shrink: 0;
         height: 60px;
         border-radius: 30px;
-        padding: 0 40px 0 26px;
-        line-height: 60px;
+        padding: 4px 40px 0 26px;
+        line-height: 56px;
         font-size: 43px;
         letter-spacing: -0.439px;
         font-weight: 300;
@@ -612,6 +612,7 @@
         background: linear-gradient(210deg, #F5E0D9 10.3%, #F9DF7C 82.73%,var(--color-att-yellow) 141.09%);
     }
     &.tile-six {
+        aspect-ratio: 228/289 !important;
         background:var(--color-att-yellow);
         .tile-photo {
             img, svg {
@@ -773,6 +774,9 @@
         width: 100%;
         flex-shrink: 0;
     }
+    .tile-title {
+        font-weight: 300;
+    }
 }
 .item-tile-product {
     display: flex;
@@ -819,6 +823,7 @@
         width: 100%;
         justify-content: flex-end;
         margin-top: -14px;
+        z-index: 2;
     }
     .tile-photo {
         height: 160px;
@@ -1397,6 +1402,17 @@
     }
 }
 @media (max-width: 1023px) {
+    .item-tile-cart {
+        .tile-option-wrap {
+            .frm-select-wrap {
+                .btn {
+                    &:not(.active) {
+                        border-color: #f9efeb;
+                    }
+                }
+            }
+        }
+    }
     .item-tile-photo-main, .item-tile-main {
         &.tile-third {
             min-height: 480px;
@@ -1613,6 +1629,32 @@
     }
 }
 @media (min-width: 1024px) {
+    .item-tile-product {
+        &.tile-att-02 {
+            padding-bottom: 0;
+            .tile-title-wrap {
+                padding: 0 25px 22px 3rem;
+                height: auto;
+                margin-top: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .tile-photo {
+                max-width: 190px;
+                margin: 0 auto;
+            }
+            .tile-title {
+                font-size: 2.25rem;
+                line-height: (25/19);
+                letter-spacing: -0.196px;
+                text-align: left;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
     .item-tile-cart {
         min-height: 136px;
         padding: 20px 30px 20px 204px;
@@ -1879,6 +1921,11 @@
             z-index: 7;
             
         }
+        .tile-sticker-corner {
+            font-size: 13px;
+            height: 60px;
+            line-height: 98px;
+        }
     }
     .item-tile-order {
         font-size: (20/8.5rem);
@@ -1916,6 +1963,39 @@
         padding: 16px;
         border-radius: 34px;
         min-height: 416px;
+        &.tile-six {
+            border-radius: 13px;
+            .tile-photo-wrap {
+                display: block;
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .tile-photo {
+                
+            }
+            .tile-title-wrap {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0 15px 22px 3rem;
+            }
+            .tile-title {
+                font-size: 2.25rem;
+                line-height: (25/19);
+                letter-spacing: -0.196px;
+                text-align: left;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .tile-actions-wrap {
+                display: none;
+            }
+        }
         .tile-info-panel-wrap {
             font-size: 19px;
             line-height: 25px;
@@ -2022,6 +2102,9 @@
         font-size: 15px;
         letter-spacing: -0.922px;
         min-width: 42px;
+    }
+    .elm-scale-wrap .scale-title.scale-title-att, .tile-scale-wrap .scale-title.scale-title-att {
+        border-width: 2px;
     }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -2275,6 +2358,30 @@
         font-size: 20px;
         line-height: 25px;
         padding-bottom: 20px;
+        &.tile-att-02 {
+            padding-bottom: 0;
+            .tile-title-wrap {
+                padding: 0 25px 28px 3.5rem;
+                height: auto;
+                margin-top: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .tile-photo {
+                max-width: 190px;
+                margin: 0 auto;
+            }
+            .tile-title {
+                font-size: 2.25rem;
+                line-height: (25/19);
+                letter-spacing: -0.196px;
+                text-align: left;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
         .tile-title-wrap {
             height: 50px;
             margin-top: -24px;
