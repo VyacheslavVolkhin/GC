@@ -4204,6 +4204,10 @@ body.popup-open {
                 order: 4;
             }
         }
+        .card-info-wrap {
+            padding-bottom: 0 !important;
+        }
+        
         .stickers-inner-wrap {
             .elm-sticker {
                 display: block;
@@ -6921,6 +6925,15 @@ body.popup-open {
                     padding-left: 0;
                     padding-right: 0;
                 }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) and (max-width: 1152px) {
+    .card-box {
+        .card-info-wrap {
+            &:first-child {
+                margin-bottom: -20px;
             }
         }
     }

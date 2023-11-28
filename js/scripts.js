@@ -234,7 +234,8 @@ $(document).ready(function () {
 
 	
 	
-
+	//card scroll
+	$('.card-box .card-info-wrap:first').css('padding-bottom', ($('.card-box .ext-outer-wrap').outerHeight() - 84))
 
 	//side menu
 	if (!!$('.js-side-menu').offset()) {
