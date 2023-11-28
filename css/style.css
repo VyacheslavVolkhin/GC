@@ -3990,6 +3990,36 @@ body {
     border-width: 2px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .item-tile-catalog {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 30px;
+  }
+  .item-tile-catalog .tile-actions-wrap {
+    width: 100%;
+    padding: 30px 60px 0 0;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .item-tile-catalog .tile-scale-wrap {
+    width: 10.45454545em;
+    padding: 0 10px 0 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .item-tile-catalog .tile-counter-wrap {
+    width: 167px;
+    margin-left: 8px;
+  }
+  .item-tile-catalog .tile-inner-wrap {
+    padding-right: 0;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1199px) {
   .item-tile-cart .tile-inner-wrap {
     -ms-flex-wrap: wrap;
@@ -4048,34 +4078,6 @@ body {
   .item-tile-info-text .tile-title {
     font-size: 18px;
   }
-  .item-tile-catalog {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-left: 30px;
-  }
-  .item-tile-catalog .tile-actions-wrap {
-    width: 100%;
-    padding: 30px 60px 0 0;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-  }
-  .item-tile-catalog .tile-scale-wrap {
-    width: 10.45454545em;
-    padding: 0 10px 0 0;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-  .item-tile-catalog .tile-counter-wrap {
-    width: 167px;
-    margin-left: 8px;
-  }
-  .item-tile-catalog .tile-inner-wrap {
-    padding-right: 0;
-  }
   .item-tile-photo-main .tile-title.title-dsmall,
   .item-tile-main.tile-third .tile-title.title-dsmall {
     font-size: 3rem;
@@ -4099,6 +4101,23 @@ body {
   }
   .item-tile-cart .tile-photo-wrap {
     width: 144px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .item-tile-catalog .tile-actions-wrap {
+    font-size: 18px;
+    width: 10em;
+  }
+  .item-tile-catalog .tile-counter-wrap {
+    padding-right: 60px;
+  }
+  .item-tile-catalog .tile-counter-wrap .frm-field-counter {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .item-tile-catalog .tile-actions-wrap {
+    width: 10em;
   }
 }
 @media (min-width: 1200px) and (max-width: 1499px) {

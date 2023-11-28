@@ -2107,7 +2107,33 @@
         border-width: 2px;
     }
 }
+@media (min-width: 1024px) and (max-width: 1099px) {
+    .item-tile-catalog {
+        flex-wrap: wrap;
+        padding-left: 30px;
+        .tile-actions-wrap {
+            width: 100%;
+            padding: 30px 60px 0 0;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        .tile-scale-wrap {
+            width: 10.45454545em;
+            padding: 0 10px 0 0;
+            flex-shrink: 0;
+        }
+        .tile-counter-wrap {
+            width: 167px;
+            margin-left: 8px;
+        }
+        .tile-inner-wrap {
+            padding-right: 0;
+        }
+    }
+}
 @media (min-width: 1024px) and (max-width: 1199px) {
+    
     .item-tile-cart {
         .tile-inner-wrap {
             flex-wrap: wrap;
@@ -2166,29 +2192,7 @@
             font-size: 18px;
         }
     }
-    .item-tile-catalog {
-        flex-wrap: wrap;
-        padding-left: 30px;
-        .tile-actions-wrap {
-            width: 100%;
-            padding: 30px 60px 0 0;
-            align-items: flex-start;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-        .tile-scale-wrap {
-            width: 10.45454545em;
-            padding: 0 10px 0 0;
-            flex-shrink: 0;
-        }
-        .tile-counter-wrap {
-            width: 167px;
-            margin-left: 8px;
-        }
-        .tile-inner-wrap {
-            padding-right: 0;
-        }
-    }
+    
     .item-tile-photo-main, .item-tile-main.tile-third {
         .tile-title.title-dsmall {
             font-size: 3rem;
@@ -2209,6 +2213,27 @@
         padding-left: 144px;
         .tile-photo-wrap {
             width: 144px;
+        }
+    }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+    .item-tile-catalog {
+        .tile-actions-wrap {
+            font-size: 18px;
+            width: 10em;
+        }
+        .tile-counter-wrap {
+            padding-right: 60px;
+            .frm-field-counter {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .item-tile-catalog {
+        .tile-actions-wrap {
+            width: 10em;
         }
     }
 }
